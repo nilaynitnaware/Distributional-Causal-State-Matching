@@ -1,0 +1,195 @@
+{
+  "action_bounds": {
+    "log_scale": [
+      -1.0,
+      1.0
+    ],
+    "shift": [
+      -2.0,
+      2.0
+    ]
+  },
+  "budgets": [
+    1,
+    2
+  ],
+  "cache": {
+    "scope": "fresh isolated cache per instance and policy; reused across all 40 true-root replays",
+    "shared_across_policies": false
+  },
+  "caps": {
+    "campaign_wall_seconds": 7200,
+    "cumulative_tied_family_product_upper_bound_per_instance_policy": 10000,
+    "uncached_certificate_searches_per_instance_policy": 2000,
+    "worker_cpu_seconds": 60,
+    "worker_rss_bytes": 536870912,
+    "worker_wall_seconds": 60
+  },
+  "concurrency": {
+    "maximum_workers": 4,
+    "submission_order_frozen": true
+  },
+  "execution_order": [
+    "s01c:n40:path:r0:shift_scale_generated:B1",
+    "s01c:n40:path:r0:shift_scale_generated:B2",
+    "s01c:n40:path:r0:correlated_noise:B1",
+    "s01c:n40:path:r0:correlated_noise:B2",
+    "s01c:n40:path:r1:shift_scale_generated:B1",
+    "s01c:n40:path:r1:shift_scale_generated:B2",
+    "s01c:n40:path:r1:correlated_noise:B1",
+    "s01c:n40:path:r1:correlated_noise:B2",
+    "s01c:n40:path:r2:shift_scale_generated:B1",
+    "s01c:n40:path:r2:shift_scale_generated:B2",
+    "s01c:n40:path:r2:correlated_noise:B1",
+    "s01c:n40:path:r2:correlated_noise:B2",
+    "s01c:n40:path:r3:shift_scale_generated:B1",
+    "s01c:n40:path:r3:shift_scale_generated:B2",
+    "s01c:n40:path:r3:correlated_noise:B1",
+    "s01c:n40:path:r3:correlated_noise:B2",
+    "s01c:n40:path:r4:shift_scale_generated:B1",
+    "s01c:n40:path:r4:shift_scale_generated:B2",
+    "s01c:n40:path:r4:correlated_noise:B1",
+    "s01c:n40:path:r4:correlated_noise:B2",
+    "s01c:n40:path:r5:shift_scale_generated:B1",
+    "s01c:n40:path:r5:shift_scale_generated:B2",
+    "s01c:n40:path:r5:correlated_noise:B1",
+    "s01c:n40:path:r5:correlated_noise:B2",
+    "s01c:n40:path:r6:shift_scale_generated:B1",
+    "s01c:n40:path:r6:shift_scale_generated:B2",
+    "s01c:n40:path:r6:correlated_noise:B1",
+    "s01c:n40:path:r6:correlated_noise:B2",
+    "s01c:n40:path:r7:shift_scale_generated:B1",
+    "s01c:n40:path:r7:shift_scale_generated:B2",
+    "s01c:n40:path:r7:correlated_noise:B1",
+    "s01c:n40:path:r7:correlated_noise:B2",
+    "s01c:n40:path:r8:shift_scale_generated:B1",
+    "s01c:n40:path:r8:shift_scale_generated:B2",
+    "s01c:n40:path:r8:correlated_noise:B1",
+    "s01c:n40:path:r8:correlated_noise:B2",
+    "s01c:n40:path:r9:shift_scale_generated:B1",
+    "s01c:n40:path:r9:shift_scale_generated:B2",
+    "s01c:n40:path:r9:correlated_noise:B1",
+    "s01c:n40:path:r9:correlated_noise:B2",
+    "s01c:n40:uniform_random_labelled_tree:r0:shift_scale_generated:B1",
+    "s01c:n40:uniform_random_labelled_tree:r0:shift_scale_generated:B2",
+    "s01c:n40:uniform_random_labelled_tree:r0:correlated_noise:B1",
+    "s01c:n40:uniform_random_labelled_tree:r0:correlated_noise:B2",
+    "s01c:n40:uniform_random_labelled_tree:r1:shift_scale_generated:B1",
+    "s01c:n40:uniform_random_labelled_tree:r1:shift_scale_generated:B2",
+    "s01c:n40:uniform_random_labelled_tree:r1:correlated_noise:B1",
+    "s01c:n40:uniform_random_labelled_tree:r1:correlated_noise:B2",
+    "s01c:n40:uniform_random_labelled_tree:r2:shift_scale_generated:B1",
+    "s01c:n40:uniform_random_labelled_tree:r2:shift_scale_generated:B2",
+    "s01c:n40:uniform_random_labelled_tree:r2:correlated_noise:B1",
+    "s01c:n40:uniform_random_labelled_tree:r2:correlated_noise:B2",
+    "s01c:n40:uniform_random_labelled_tree:r3:shift_scale_generated:B1",
+    "s01c:n40:uniform_random_labelled_tree:r3:shift_scale_generated:B2",
+    "s01c:n40:uniform_random_labelled_tree:r3:correlated_noise:B1",
+    "s01c:n40:uniform_random_labelled_tree:r3:correlated_noise:B2",
+    "s01c:n40:uniform_random_labelled_tree:r4:shift_scale_generated:B1",
+    "s01c:n40:uniform_random_labelled_tree:r4:shift_scale_generated:B2",
+    "s01c:n40:uniform_random_labelled_tree:r4:correlated_noise:B1",
+    "s01c:n40:uniform_random_labelled_tree:r4:correlated_noise:B2",
+    "s01c:n40:uniform_random_labelled_tree:r5:shift_scale_generated:B1",
+    "s01c:n40:uniform_random_labelled_tree:r5:shift_scale_generated:B2",
+    "s01c:n40:uniform_random_labelled_tree:r5:correlated_noise:B1",
+    "s01c:n40:uniform_random_labelled_tree:r5:correlated_noise:B2",
+    "s01c:n40:uniform_random_labelled_tree:r6:shift_scale_generated:B1",
+    "s01c:n40:uniform_random_labelled_tree:r6:shift_scale_generated:B2",
+    "s01c:n40:uniform_random_labelled_tree:r6:correlated_noise:B1",
+    "s01c:n40:uniform_random_labelled_tree:r6:correlated_noise:B2",
+    "s01c:n40:uniform_random_labelled_tree:r7:shift_scale_generated:B1",
+    "s01c:n40:uniform_random_labelled_tree:r7:shift_scale_generated:B2",
+    "s01c:n40:uniform_random_labelled_tree:r7:correlated_noise:B1",
+    "s01c:n40:uniform_random_labelled_tree:r7:correlated_noise:B2",
+    "s01c:n40:uniform_random_labelled_tree:r8:shift_scale_generated:B1",
+    "s01c:n40:uniform_random_labelled_tree:r8:shift_scale_generated:B2",
+    "s01c:n40:uniform_random_labelled_tree:r8:correlated_noise:B1",
+    "s01c:n40:uniform_random_labelled_tree:r8:correlated_noise:B2",
+    "s01c:n40:uniform_random_labelled_tree:r9:shift_scale_generated:B1",
+    "s01c:n40:uniform_random_labelled_tree:r9:shift_scale_generated:B2",
+    "s01c:n40:uniform_random_labelled_tree:r9:correlated_noise:B1",
+    "s01c:n40:uniform_random_labelled_tree:r9:correlated_noise:B2"
+  ],
+  "families": [
+    "path",
+    "uniform_random_labelled_tree"
+  ],
+  "frozen_before_policy_evaluation": true,
+  "historical_design_discrepancy": "S01-B did not serialize proposal/retry logs and shared caches across policies; S01-C preserves its distributions but separately freezes proposals and isolates caches.",
+  "instance_count": 80,
+  "master_seed": 20261012,
+  "n": 40,
+  "policy_count": 4,
+  "policy_order": [
+    "one_step_matching_aware",
+    "balance",
+    "first_unresolved",
+    "max_undirected_degree"
+  ],
+  "schema_version": "s01_c_tree_population_n40_v1",
+  "seed_schedule": {
+    "disjointness": "new master/tag schedule; no S01-B source seed is reused",
+    "source_proposal": "stable_seed(20261012,'s01c','source',family,40,replicate,proposal_index)",
+    "target": "stable_seed(accepted_source_seed,'target',regime), independent of budget"
+  },
+  "source_count": 20,
+  "source_distributions": {
+    "coefficient_abs_uniform": [
+      0.25,
+      0.65
+    ],
+    "coefficient_sign": "independent fair sign",
+    "noise_variance_uniform": [
+      0.7,
+      1.4
+    ],
+    "path": "random node permutation joined consecutively",
+    "random_tree": "uniform random labelled tree",
+    "root": "uniform node"
+  },
+  "source_generation": {
+    "acceptance_checks": [
+      "tree has nodes 0..39 and exactly 39 edges",
+      "complete outward-root class has exactly 40 distinct candidates",
+      "source moments finite and covariance positive definite",
+      "all 40 candidate SCM reconstructions reproduce source moments"
+    ],
+    "retry_limit_proposals_per_source": 5,
+    "selection_prohibitions": [
+      "query cost",
+      "matching savings",
+      "optimum value",
+      "certificate difficulty",
+      "runtime"
+    ]
+  },
+  "source_replicates_per_family": 10,
+  "stopping": {
+    "MATCH": "first directly certified common physical command over every surviving root",
+    "full_recovery": "one surviving root",
+    "inconclusive": "continue conservatively and record fallback; never authorize stopping"
+  },
+  "target_distributions": {
+    "correlation": "one node pair, signed magnitude Uniform(0.12,0.28)",
+    "reachability_note": "generated two-coordinate target is B=2 reachable; B=1 is not assumed reachable",
+    "scale": "one nonroot node, exp(Uniform(log(0.7),log(1.45)))",
+    "shift": "one node, Uniform(-1.25,1.25)"
+  },
+  "target_regimes": [
+    "shift_scale_generated",
+    "correlated_noise"
+  ],
+  "targets_per_source": 2,
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "timing_scope": {
+    "certificate_seconds": "uncached calls to complete tied-family intersection and direct KL certification",
+    "selection_excluding_certificate": "policy replay wall time minus certificate seconds",
+    "worker": "reconstruction, 40 candidate optimizations, one policy over every root, serialization"
+  }
+}

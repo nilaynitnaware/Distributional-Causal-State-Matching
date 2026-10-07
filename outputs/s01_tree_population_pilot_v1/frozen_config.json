@@ -1,0 +1,72 @@
+{
+  "action_bounds": {
+    "log_scale": [
+      -1.0,
+      1.0
+    ],
+    "shift": [
+      -2.0,
+      2.0
+    ]
+  },
+  "budgets": [
+    1,
+    2
+  ],
+  "caps": {
+    "pilot_cpu_seconds": 7200,
+    "pilot_rss_bytes": 4294967296,
+    "tied_family_combinations": 10000,
+    "uncached_certificate_checks": 2000,
+    "worker_cpu_seconds": 60,
+    "worker_rss_bytes": 536870912,
+    "worker_wall_seconds": 60
+  },
+  "families": [
+    "path",
+    "uniform_random_labelled_tree"
+  ],
+  "frozen_before_execution": true,
+  "instance_count": 80,
+  "master_seed": 20261011,
+  "n": 20,
+  "schema_version": "s01_tree_population_pilot_v1",
+  "source_distributions": {
+    "coefficient_abs_uniform": [
+      0.25,
+      0.65
+    ],
+    "coefficient_sign": "independent fair sign",
+    "noise_variance_uniform": [
+      0.7,
+      1.4
+    ],
+    "path": "random node permutation joined consecutively",
+    "random_tree": "uniform random labelled tree",
+    "root": "uniform node"
+  },
+  "source_replicates_per_family": 10,
+  "source_seed": "stable_seed(20261011,'s01b','source',family,20,replicate)",
+  "stopping": {
+    "DAG": "one surviving root",
+    "MATCH": "direct-KL common-command certificate over every surviving root",
+    "inconclusive": "continue conservatively; never a terminal child"
+  },
+  "target_distributions": {
+    "correlation": "one node pair, signed magnitude Uniform(0.12,0.28)",
+    "reachability_note": "standard shift-scale target is B=2 reachable; at B=1 it is a projection unless independently established; correlated-noise targets retain the stated non-reachability interpretation",
+    "scale": "one nonroot node, exp(Uniform(log(0.7),log(1.45)))",
+    "shift": "one node, Uniform(-1.25,1.25)"
+  },
+  "target_regimes": [
+    "shift_scale_generated",
+    "correlated_noise"
+  ],
+  "target_seed": "stable_seed(source_seed,'target',regime), independent of budget",
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  }
+}

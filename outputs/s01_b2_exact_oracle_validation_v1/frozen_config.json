@@ -1,0 +1,63 @@
+{
+  "action_atol": 1e-10,
+  "action_rtol": 1e-09,
+  "bounds": {
+    "log_scale": [
+      -1.0,
+      1.0
+    ],
+    "shift": [
+      -2.0,
+      2.0
+    ]
+  },
+  "budget": 2,
+  "corrected_exact_archive": "outputs/small_mec_command_space_paired_v2/corrected_audit/per_instance.jsonl",
+  "diagnostic_only": true,
+  "frozen_before_measurement": true,
+  "input_bank": "outputs/small_mec_command_space_paired_v2/frozen_inputs/instances.jsonl",
+  "input_instance_count": 180,
+  "kl_direction": "target_to_candidate",
+  "loss_atol": 1e-12,
+  "loss_rtol": 1e-11,
+  "policies": [
+    "one_step_matching_aware",
+    "balance"
+  ],
+  "prohibitions": [
+    "no_new_campaign",
+    "no_n40",
+    "no_finite_sample",
+    "no_s02",
+    "no_bank_or_corrected_archive_modification",
+    "no_n20_bellman"
+  ],
+  "resource_limits": {
+    "one_numerical_thread": true,
+    "overall_cpu_seconds": 3600,
+    "tied_family_combinations_per_instance_policy": 10000,
+    "uncached_certificate_checks_per_instance_policy": 2000,
+    "worker_cpu_seconds": 60,
+    "worker_rss_bytes": 1073741824,
+    "worker_wall_seconds": 60
+  },
+  "schema_version": "s01_b2_exact_oracle_validation_v1",
+  "selection_rule": {
+    "balance": [
+      "largest_raw_child_cell_size",
+      "node_index"
+    ],
+    "one_step_matching_aware": [
+      "largest_uncertified_child_cell_size_zero_if_all_certified",
+      "largest_raw_child_cell_size",
+      "negative_certified_child_cell_count",
+      "node_index"
+    ]
+  },
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  }
+}

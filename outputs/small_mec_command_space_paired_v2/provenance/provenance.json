@@ -1,0 +1,122 @@
+{
+  "archived_input_fingerprints": {
+    "outputs/small_mec_matching_query/machine_readable/failures.json": {
+      "bytes": 1281,
+      "sha256": "768ce92a266ad753b4cc63010dd5efc814d8b1c45a642cd2a98964eab928132d"
+    },
+    "outputs/small_mec_matching_query/machine_readable/instances.csv": {
+      "bytes": 100244,
+      "sha256": "0361fc3967d512b4c258ee862ea8c595b92f9471f47152b6a9a09c3f3e1c8a6d"
+    },
+    "outputs/table2_audit_resolution/candidate_dags.jsonl": {
+      "bytes": 407573,
+      "sha256": "48e24a3f42e8d2023221b92c3b2255a15a7b6d530148c13a5114321cc851e06b"
+    },
+    "outputs/table2_audit_resolution/checks.json": {
+      "bytes": 137730,
+      "sha256": "13450d22d89e27183ca4b6a8fe9ecbf88e2cf1deff8d4bf5b1274d97ed824686"
+    },
+    "outputs/table2_audit_resolution/per_instance.csv": {
+      "bytes": 90836,
+      "sha256": "72c63dc9d17373208cc3a058bfe1dd111dee34634139a336b21facb1ec2e846c"
+    },
+    "outputs/table2_audit_resolution/summary.json": {
+      "bytes": 15607,
+      "sha256": "4e8994de040666ec7bd5040e0ff3671fb84af8cb84d496222ded40af0ca88ce5"
+    },
+    "outputs/table2_audit_resolution/traces/bellman_policy_trees.jsonl": {
+      "bytes": 3541319,
+      "sha256": "ddb5ee90876c9603088d91e17acee1664d812acd83d0b9b93bd4de0a0326eb44"
+    },
+    "outputs/table2_audit_resolution/traces/bellman_state_catalog.jsonl": {
+      "bytes": 14760693,
+      "sha256": "ef12f5ac1d5aa8d505d222f8e362ecbf8053f40311fe064d539804c613a3931d"
+    },
+    "outputs/table2_audit_resolution/traces/fixed_policy_candidate_paths.jsonl": {
+      "bytes": 3087832,
+      "sha256": "b010e7f424fb0a4fe1786653781fc8a427f3e4b52168321f562c8be545516e89"
+    },
+    "outputs/table2_audit_resolution/traces/realized_paths.jsonl": {
+      "bytes": 931189,
+      "sha256": "916a5bb2f28141abbf1e959c92f8518b775113aeccc6dd3d5e02323082c5c0e3"
+    },
+    "research/small_mec_matching_query/config.json": {
+      "bytes": 679,
+      "sha256": "55662cff39b1b28fcca870418aefdfe135aeea362c08c435281f613e04afae63"
+    }
+  },
+  "baseline_revision": "75d1a34ed0f710c4335c6361a2e295faba076ee3",
+  "current_and_isolated_baseline_banks_identical": true,
+  "current_frozen_bank_sha256": "326b1896b4fc637774668594b43c892d74458a503a8b1ebd4f5e31722860d806",
+  "current_revision": "75d1a34ed0f710c4335c6361a2e295faba076ee3",
+  "environment": {
+    "executable": "/home/nlp-lab/miniconda3/envs/shift-scale/bin/python",
+    "networkx": "3.6.1",
+    "numpy": "2.5.1",
+    "platform": "Linux-7.0.0-30-generic-x86_64-with-glibc2.39",
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:38:16) [GCC 14.3.0]",
+    "scipy": "1.18.0"
+  },
+  "git_status_porcelain": [
+    "M environments/__pycache__/blackbox.cpython-312.pyc",
+    " M graphs/__pycache__/__init__.cpython-312.pyc",
+    " M graphs/__pycache__/noise.cpython-312.pyc",
+    " M graphs/__pycache__/nonrealisable_targets.cpython-312.pyc",
+    " M graphs/__pycache__/scm.cpython-312.pyc",
+    " M graphs/__pycache__/seeds.cpython-312.pyc",
+    " M graphs/__pycache__/target_realisability.cpython-312.pyc",
+    " M matching/__pycache__/coordinate_search.cpython-312.pyc",
+    " M oracle/__pycache__/analytic_gaussian_kl.cpython-312.pyc",
+    " M oracle/__pycache__/batching.cpython-312.pyc",
+    " M oracle/__pycache__/noiseless_probe_environment.cpython-312.pyc",
+    " M oracle/__pycache__/sparse_shift_scale_kl.cpython-312.pyc",
+    " M query_complexity/__pycache__/__init__.cpython-312.pyc",
+    " M query_complexity/__pycache__/core.cpython-312.pyc",
+    " M query_complexity/__pycache__/local_mechanism.cpython-312.pyc",
+    " M query_complexity/__pycache__/public_probe.cpython-312.pyc",
+    " M research/matching_query_complexity.py",
+    " M research/small_mec_matching_query/experiment.py",
+    " M tests/test_small_mec_matching_query.py",
+    "?? outputs/small_mec_command_space_paired/",
+    "?? outputs/small_mec_command_space_paired_v2/",
+    "?? outputs/table2_audit_resolution/",
+    "?? research/__pycache__/",
+    "?? research/small_mec_matching_query/__pycache__/",
+    "?? research/small_mec_matching_query/command_space_validation.py",
+    "?? research/small_mec_matching_query/freeze_bank.py",
+    "?? research/small_mec_matching_query/paired_command_space_recompute.py",
+    "?? research/small_mec_matching_query/root_scale_command_audit.py",
+    "?? research/small_mec_matching_query/table2_audit.py",
+    "?? tests/__pycache__/test_command_space_matching.cpython-312-pytest-9.1.1.pyc",
+    "?? tests/__pycache__/test_matching_query_complexity_research.cpython-312-pytest-9.1.1.pyc",
+    "?? tests/__pycache__/test_small_mec_matching_query.cpython-312-pytest-9.1.1.pyc",
+    "?? tests/__pycache__/test_table2_audit.cpython-312-pytest-9.1.1.pyc",
+    "?? tests/test_command_space_matching.py",
+    "?? tests/test_table2_audit.py"
+  ],
+  "isolated_baseline_frozen_bank_sha256": "326b1896b4fc637774668594b43c892d74458a503a8b1ebd4f5e31722860d806",
+  "relevant_code_fingerprints": {
+    "research/matching_query_complexity.py": {
+      "bytes": 54406,
+      "sha256": "341f708520bb27292dd9b6f2ada89d7ac38cf8710add2e17fdd0dafc6edcaa4c"
+    },
+    "research/small_mec_matching_query/experiment.py": {
+      "bytes": 38363,
+      "sha256": "47c3e37972b0933ae1d028f4922cfd54c6fc70b364a534bf5e1ee3a02b92cfac"
+    },
+    "research/small_mec_matching_query/freeze_bank.py": {
+      "bytes": 8075,
+      "sha256": "766fbddac2b5e9a74139d788c12c0127142b30f38a0b8536e2343a51634e7e85"
+    },
+    "research/small_mec_matching_query/paired_command_space_recompute.py": {
+      "bytes": 20144,
+      "sha256": "92b0706751fd5a54588af79422a954a4c0cf316390c2cf3522eff49c5ef7ff1b"
+    },
+    "research/small_mec_matching_query/table2_audit.py": {
+      "bytes": 52742,
+      "sha256": "e69468d6fe0197d69b8d520071b8a62120bcbc9c357ef372f73a505278aafdcf"
+    }
+  },
+  "relevant_uncommitted_diff_sha256": "0cdf45bc596eff970b43cf65933a0b9825483746868cba89793a0f540e8296a6",
+  "schema_version": "small_mec_command_space_paired_v1"
+}

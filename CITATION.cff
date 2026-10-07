@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as described in this metadata file."
+title: "Distributional Causal State Matching under Partial Causal Information"
+authors:
+  - family-names: Nitnaware
+    given-names: Nilay
+  - family-names: Tamimuddin
+    given-names: A.N.S.M.
+  - family-names: Saha
+    given-names: Saptarshi
+  - family-names: Garain
+    given-names: Utpal

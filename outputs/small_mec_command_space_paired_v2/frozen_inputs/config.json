@@ -1,0 +1,23 @@
+{
+  "schema_version": "small_mec_matching_query_v1",
+  "seed": 20260826,
+  "node_counts": [5, 6, 7],
+  "graph_families": ["path", "rooted_tree", "erdos_renyi"],
+  "replicates_per_cell": 10,
+  "target_regimes": ["realisable", "correlated_noise"],
+  "budget": 2,
+  "shift_bounds": [-2.0, 2.0],
+  "log_scale_bounds": [-1.0, 1.0],
+  "coefficient_min_abs": 0.25,
+  "coefficient_max_abs": 0.65,
+  "noise_variance_bounds": [0.7, 1.4],
+  "erdos_renyi_edge_probability": 0.35,
+  "minimum_mec_size": 2,
+  "maximum_mec_size": 32,
+  "maximum_undirected_edges": 12,
+  "maximum_source_attempts": 200,
+  "loss_atol": 1e-12,
+  "loss_rtol": 1e-11,
+  "action_atol": 1e-10,
+  "action_rtol": 1e-9
+}

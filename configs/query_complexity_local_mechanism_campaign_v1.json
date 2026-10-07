@@ -1,0 +1,52 @@
+{
+  "protocol_version": "kl_query_complexity_v1",
+  "campaign_id": "kl_query_complexity_v1_local_mechanism_full",
+  "node_counts": [10, 20, 40],
+  "replicate_seeds": 30,
+  "base_seed": 20260811,
+  "graph_regimes": [
+    {"family": "random_tree"},
+    {"family": "erdos_renyi", "edge_probability": 0.15},
+    {"family": "erdos_renyi", "edge_probability": 0.35},
+    {"family": "barabasi_albert", "attachment_edges": 2},
+    {
+      "family": "tree_of_cliques",
+      "branching_degree": 2,
+      "min_clique_size": 3,
+      "max_clique_size": 6
+    }
+  ],
+  "initial_graph_regimes": [
+    {"name": "exact_cpdag", "revealed_fraction": 0.0},
+    {"name": "cpdag_revealed_25", "revealed_fraction": 0.25},
+    {"name": "cpdag_revealed_50", "revealed_fraction": 0.5},
+    {"name": "fully_directed_control", "revealed_fraction": 1.0}
+  ],
+  "policies": ["first_unresolved", "max_undirected_degree"],
+  "coefficient_min_abs": 0.2,
+  "coefficient_max_abs": 0.8,
+  "noise_variance_bounds": [0.5, 2.0],
+  "shift_bounds": [-2.0, 2.0],
+  "scale_bounds": [0.25, 3.0],
+  "budget_rule": "min_6_or_n",
+  "experimental_sparsity": 1,
+  "canonical_target": {
+    "family": "realisable",
+    "active_shift_fraction": 0.35,
+    "active_scale_fraction": 0.2,
+    "shift_magnitude_bounds": [0.2, 0.8],
+    "scale_value_bounds": [0.7, 1.4]
+  },
+  "target_robustness_panel": [
+    "realisable",
+    "nonproportional_coefficients",
+    "graph_perturbed",
+    "correlated_noise",
+    "external_spd",
+    "heterogeneous_invariant_noise"
+  ],
+  "references": ["known_dag_exact_dp", "graph_free_total_effect_dp"],
+  "primary_metrics": ["T_over_n", "n_minus_T"],
+  "quality_certificate": "KL_gap",
+  "exactness_tolerance": 2e-11
+}
