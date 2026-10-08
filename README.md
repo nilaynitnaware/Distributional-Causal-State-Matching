@@ -289,16 +289,14 @@ drawn, or explicitly paired.
 
 ## Reproducibility and historical provenance
 
-This replication-focused candidate selects code, reviewed configurations,
-declared dependencies, bounded frozen inputs, a diagnostic runner, and
-reproduction/raw-data retrieval guidance. It does not promise a complete
-archive of original outputs, logs, or internal audit/review evidence. See the
-[reproducibility index](docs/reproducibility/README.md) and the [portable setup
-and reproduction guide](docs/reproducibility/reproduction-guide.md). Historical
-execution-provenance and campaign-evidence pages remain historical locators
-whose public membership is separately unresolved; they distinguish original run
-metadata from dependency specifications, later source recovery, and audit-host
-measurements.
+This repository includes code, reviewed configurations, declared dependencies,
+bounded frozen inputs, a diagnostic runner, and reproduction/raw-data retrieval
+guidance. It does not promise a complete archive of original outputs, logs, or
+internal audit/review evidence. See the [reproducibility index](docs/reproducibility/README.md)
+and the [portable setup and reproduction guide](docs/reproducibility/reproduction-guide.md).
+Historical execution-provenance and campaign-evidence pages distinguish original
+run metadata from dependency specifications, later source recovery, and
+audit-host measurements.
 
 For setup boundaries, available frozen inputs, entrypoint interfaces, and
 output-safety notes, use the [portable setup and reproduction guide](docs/reproducibility/reproduction-guide.md).
@@ -347,8 +345,8 @@ configurations are under the [MIT License](LICENSE). Selected project-authored
 reproduction documentation, provenance, and required frozen inputs are under
 [CC BY 4.0](LICENSE-DATA). See the file-level [license scope](LICENSE-SCOPE.md)
 and [third-party/excluded-material notices](THIRD_PARTY_NOTICES.md). Material
-outside those explicit scopes, including outputs and private banks unless
-separately identified, remains excluded or unresolved.
+outside those explicit scopes remains excluded. Both archived population banks
+are excluded; independent contributor/institutional authority is not verified.
 
 Please cite our paper, Distributional Causal State Matching under Partial Causal
 Information, when using this work in research. See [CITATION.cff](CITATION.cff)

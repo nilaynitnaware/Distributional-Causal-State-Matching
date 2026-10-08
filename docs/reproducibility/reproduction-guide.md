@@ -2,7 +2,11 @@
 
 ## Status and evidence boundary
 
-This is an incomplete, unpublished candidate assembled from a current source snapshot and bounded archived evidence. Static source, path-closure, and documentation review only have been performed. No record establishes successful execution, complete reproducibility, ownership clearance, publication, or a recovered historical environment.
+This public repository combines a current source snapshot with bounded archived
+evidence. Selected-only parsing/imports and four files/22 tests passed. Full
+campaigns, fresh installation, and physical-data execution remain unverified;
+no record establishes complete reproducibility or a recovered historical
+environment.
 
 Keep four activities distinct: (1) inspect archived evidence without running code; (2) reproduce an analysis from frozen inputs only when every required input, dependency, and safe new output location is available; (3) launch a new computation as an unvalidated run in a user-supplied environment; and (4) interpret historical commands/environments as records, not proof of the original launch source, installed environment, or complete checkout.
 
@@ -12,7 +16,8 @@ Selected project-authored documentation and provenance prose are scoped CC BY
 
 ## Portable setup guidance (unexecuted)
 
-Run these only from the candidate project root, and only to create a prospective environment. They were not executed for release preparation:
+Run these only from the repository root, and only to create a prospective
+environment. Fresh installation has not been verified:
 
 ```bash
 python -m venv .venv
@@ -43,10 +48,17 @@ Start with `provenance/release_source_manifest.md` for the assembled source snap
 
 No raw archive is included. [Upstream physical-data retrieval](physical-data-retrieval.md) provides supported locators, version and hash classifications; it does not establish a successful retrieval, historical environment, or redistribution grant.
 
-## Remaining blockers
+## Unverified execution and evidence limitations
 
-Unresolved work is separately artifact assembly (many frozen campaign groups are absent), external packages/executables, physical raw-data access and terms, historical source/environment recoverability, runtime verification, and ownership/permission coverage for historical exports. Temporary repository/archive placeholders remain placeholders. These gaps are not cured by installing declared packages.
+Release selection and publication decisions are settled. Unverified work
+remains separately artifact assembly (many frozen campaign groups are absent),
+external packages/executables, physical raw-data access and terms, historical
+source/environment recoverability, runtime verification, and ownership/
+permission coverage for historical exports. Temporary repository/archive
+placeholders remain placeholders. These gaps are not cured by installing
+declared packages.
 
-The complete n=20/n=40 population banks remain private and excluded from public
-membership; no public archive or cleared public link is supplied here. The B2
-records are selected under the scoped notices but remain runtime-unverified.
+The complete n=20/n=40 archived population banks are excluded from public
+membership. Fresh generation is selected; exact archived-bank replay is
+deferred. The B2 records are selected under the scoped notices but remain
+runtime-unverified.

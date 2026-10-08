@@ -9,12 +9,11 @@ runner, test, or manuscript build was executed.
 
 ## Replication availability boundary
 
-This page preserves historical facts and qualifications; it is not a promise
-that its linked campaign outputs are selected for publication. The complete n=20
-bank is excluded from public membership. Its historical locator is
+This page preserves historical facts and qualifications. The complete n=20 bank
+is excluded from public membership. Its historical locator is
 `outputs/s01_tree_population_pilot_v1/instances.jsonl` (SHA-256
 `ef40acbc4f0448ef53a12df13b3e6c4d32c9796646fbdd239bfcaa3c0b4fc777`),
-not a public input or link target. Public replication instead selects the runner,
+not a public input or link target. Public replication selects the runner,
 frozen configuration, and documented seed for fresh generation. Reports,
 instance parts, validation records, and audit material remain historical locators
 or excluded material, not public dependencies or runtime evidence.

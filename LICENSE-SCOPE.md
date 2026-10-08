@@ -1,13 +1,13 @@
 # License scope
 
-`LICENSE` and `LICENSE-DATA` apply only to the selected candidate membership
-described below. They do not resolve ownership, contributor authority,
-permission, or provenance gaps. The candidate is incomplete and unpublished;
-these notices do not license an unassembled archive.
+`LICENSE` and `LICENSE-DATA` apply only to the selected repository membership
+described below. They do not resolve independent ownership, contributor
+authority, permission, or provenance gaps. These notices do not enlarge a
+grant over excluded material.
 
 The exact selected membership is maintained as a path-level release record.
 A path is covered only when it is selected there and this table assigns it a
-grant. Candidate presence alone does not make a file covered.
+grant. Repository presence alone does not make a file covered.
 
 | Candidate path or material class | Status and applicable terms | Scope qualification |
 | --- | --- | --- |
@@ -22,6 +22,5 @@ grant. Candidate presence alone does not make a file covered.
 | Upstream physical data named in records, whether referenced or retrieved separately | Not included in either candidate grant | No raw archive is granted. Locator/hash records are not a license or redistribution permission. |
 | Third-party packages named by `requirements*` or imports | Not redistributed source; own terms if obtained | References are not a bundled package-license inventory. |
 
-For a later archive, the assembler must apply these same path-level rules and
-include the applicable notices. No presently unassembled archive is released
-by this document.
+Any future archive must apply these same path-level rules and include the
+applicable notices.

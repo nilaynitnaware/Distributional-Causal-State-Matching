@@ -1,10 +1,10 @@
 # Reproducibility documentation
 
 This directory indexes replication documentation and historical provenance. The
-candidate selects code, reviewed configurations, dependency specifications,
+repository includes code, reviewed configurations, dependency specifications,
 bounded frozen inputs, the B2 diagnostic runner, and retrieval guidance; it
 does not publish a complete output archive, logs, or internal audit/review
-records. Presence is not publication clearance, runtime success, or ownership
+records. Inclusion does not establish runtime success or independent ownership
 clearance.
 
 - [Portable setup and reproduction guide](reproduction-guide.md) separates
@@ -12,8 +12,9 @@ clearance.
   and unvalidated new computation.
 
 - [S01 frozen-input and manifest assembly](s01-frozen-inputs.md) inventories
-  the compact frozen records and B2 dependencies, with privately retained
-  population banks and unresolved publication/runtime limits.
+  the compact frozen records and B2 dependencies, distinguishes selected fresh
+  generation from excluded archived population banks, and records runtime
+  limits.
 
 - [Release source manifest](../../provenance/release_source_manifest.md) records the current source snapshots and their static dependency-review qualification.
 
@@ -73,11 +74,10 @@ clearance.
   `outputs/s01_tree_population_pilot_v1/s01_tree_population_pilot_report.md`,
   `outputs/s01_c_tree_population_n40_v1/s01_c_tree_population_n40_report.md`,
   and `outputs/s08_tree_stratification_audit_v1/s08_tree_stratification_report.md`.
-  They are not selected public dependencies in this candidate; S08 is absent.
-  Its B29 continuation records the [n=20 worker-resource and shared-cache
-  clarification](population-tree-pilot.md#worker-resource-and-shared-cache-clarification-b29-p01),
-  including the distinction between the configured address-space limit and
-  measured RSS.
+  They are historical locators rather than selected public dependencies; S08 is
+  absent. The [n=20 worker-resource and shared-cache clarification](population-tree-pilot.md#worker-resource-and-shared-cache-clarification-b29-p01)
+  explains the configured address-space limit, measured RSS, and shared-cache
+  scope.
 - [Population tree scale-extension provenance](population-tree-scale-extension.md)
   is the canonical record for manuscript migration batch B08. It preserves the
   n=40 seed/freezing, 12,800-command validation, KL residual, and peak-worker

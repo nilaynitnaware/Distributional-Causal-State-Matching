@@ -1,6 +1,6 @@
 # Third-party and excluded-material notices
 
-This candidate contains no identified vendored third-party package source in
+This repository contains no identified vendored third-party package source in
 the release inspection. Import statements and `requirements.in`/`requirements.txt`
 refer to dependencies; they do not redistribute those packages, and this file
 does not present a package-license list as bundled material.
@@ -13,15 +13,15 @@ Information”. It does not apply to third-party or unresolved-origin material.
 
 ## Upstream physical data
 
-The candidate records references to Light Tunnel physical datasets and other
+The repository records references to Light Tunnel physical datasets and other
 upstream data in documentation, provenance, and generated result records. No
 raw physical-data archive is included. The [upstream physical-data retrieval](docs/reproducibility/physical-data-retrieval.md)
 page identifies immutable dataset-specific CC BY 4.0 terms/citation references
 and requested scholarly credit, separately from upstream software terms. Those
 README texts evidence wording at their recorded revisions only; they do not
-verify an archive or provide a redistribution grant. No data
-is included, relicensed, or granted by this candidate; the datasets remain
-excluded from both candidate MIT and CC BY 4.0 grants.
+verify an archive or provide a redistribution grant. The upstream physical
+datasets discussed here are not bundled with, relicensed, or granted by this
+repository; they remain outside the selected MIT and CC BY 4.0 records.
 
 ## Historical exports and unresolved material
 
