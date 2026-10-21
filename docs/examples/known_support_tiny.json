@@ -1,0 +1,58 @@
+{
+  "intervention_semantics": "mechanism_scale_noise_fixed_v1",
+  "dimensions": {
+    "experiment_modes": [
+      "known_support_oracle"
+    ],
+    "graph_families": [
+      "path"
+    ],
+    "node_counts": [
+      2
+    ],
+    "coefficient_regimes": [
+      "moderate"
+    ],
+    "target_families": [
+      "realisable"
+    ],
+    "target_realisability": [
+      true
+    ],
+    "support_ratios": [
+      0.5
+    ],
+    "policies": [
+      "known_support_oracle"
+    ],
+    "initial_cpdag_providers": [
+      "true_dag_and_coefficients"
+    ],
+    "sample_sizes": [
+      0
+    ]
+  },
+  "base_seeds": [
+    11
+  ],
+  "query_budget": 200,
+  "observation_budget": 0,
+  "probe_target_limit": 1,
+  "probe_amplitudes": [
+    0.5
+  ],
+  "local_loss_weights": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "source_equivalence_absolute": 0.1,
+  "source_equivalence_relative": 0.05,
+  "source_confidence_level": 0.95,
+  "candidate_acceptance_confidence": 0.95,
+  "covariance_estimator": "oas",
+  "backend": "numpy",
+  "device": "cpu",
+  "output_directory": "outputs/known_support_tiny",
+  "bootstrap_aggregate_replicates": 100
+}

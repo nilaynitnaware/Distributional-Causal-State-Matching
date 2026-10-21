@@ -1,9 +1,14 @@
 # Release source manifest
 
-This index records the current source snapshots and bounded replication records
-included in this public repository. `source_git_state_qualification` identifies
-whether copied bytes were tracked-clean, modified, staged, or untracked at
-assembly; a Git HEAD alone does not identify dirty or untracked bytes.
+This index records the actual public repository membership. The TSV contains
+one row for every regular payload file currently present, except the two
+manifest files themselves (whose hashes would be self-referential). At this
+revision it contains 200 payload rows and no nonexistent paths.
+
+`source_git_state_qualification` describes public release membership; detailed
+working-tree source paths, hashes, and release modifications for newly copied
+files are maintained separately in the copied-file provenance table added by
+the reproduction release.
 
 Current source snapshots are distinct from historical executed-source linkage
 recorded in the historical provenance material. The static dependency review

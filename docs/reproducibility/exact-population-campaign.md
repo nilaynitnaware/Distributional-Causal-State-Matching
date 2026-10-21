@@ -267,7 +267,7 @@ executed for B11--B13 and must not be run in place against a preserved archive.
 The included summarizer has optional `--config` and `--campaign` arguments.
 After a fresh W04 campaign has produced its required `manifest.json` and
 `results.jsonl`, its static interface supports
-`python scripts/summarize_query_complexity_campaign_for_paper.py --config configs/query_complexity_local_mechanism_campaign_v1.json --campaign NEW_DIRECTORY`.
+`python -m scripts.summarize_query_complexity_campaign_for_paper --config configs/query_complexity_local_mechanism_campaign_v1.json --campaign NEW_DIRECTORY`.
 It writes `paper_summary/` beneath that new campaign directory, so this is
 unexecuted fresh-summary guidance, not historical replay or output-safe use of
 an archive. The implemented figure validator accepts `--campaign`,

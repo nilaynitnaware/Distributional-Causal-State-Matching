@@ -89,6 +89,8 @@ packaging==26.2
     # via
     #   matplotlib
     #   pytest
+pandas==3.0.5
+    # via -r requirements.in
 pillow==12.3.0
     # via matplotlib
 pluggy==1.6.0

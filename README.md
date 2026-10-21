@@ -128,7 +128,9 @@ For one five-node problem with two target nodes:
 import numpy as np
 
 shift = np.array([0.8, 0.0, -0.4, 0.0, 0.0])
-scale = np.array([1.2, 1.0, 0.7, 1.0, 1.0])
+# Identity scales make this example valid for every generated DAG, including
+# cases where either shifted node happens to be a root.
+scale = np.ones(5)
 np.savez("target_interventions.npz", shift=shift, scale=scale)
 ```
 
