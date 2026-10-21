@@ -15,11 +15,11 @@ bootstrap replicates with seed 20261004, independently within each size bank."
 That wording is superseded. The current manuscript wording is: "We use 10000
 source-cluster bootstrap replicates with seed 20261004, separately within each
 size bank." The old quote remains the historical attribution for the original
-execution. The later archived S08
-[report](../../outputs/s08_tree_stratification_audit_v1/s08_tree_stratification_report.md),
-[machine-readable summary](../../outputs/s08_tree_stratification_audit_v1/s08_tree_stratification.json),
-[interval export](../../outputs/s08_tree_stratification_audit_v1/bootstrap_intervals.csv),
-and [validation record](../../outputs/s08_tree_stratification_audit_v1/validation_results.json)
+execution. The later archived S08 compact
+[payload](../../results/compact/README.md),
+[cell summary](../../results/compact/f_stratification/cell_summaries.csv),
+[interval export](../../results/compact/f_stratification/bootstrap_intervals.csv),
+and [validation record](../../results/compact/f_stratification/validation_results.json)
 agree on seed `20261004`, 10,000 replicates, the resampling unit, the fixed
 family strata, and the displayed results. They are later reconstruction/audit
 evidence, not an original launch record.
@@ -42,8 +42,8 @@ effect.
 
 ## Bootstrap seed and execution protocol (B10-P01)
 
-The fingerprinted archived
-[implementation](../../outputs/s08_tree_stratification_audit_v1/run_s08_tree_stratification.py)
+The fingerprinted public
+[implementation](../../scripts/run_s08_tree_stratification.py)
 defines `SEED = 20261004` and `BOOTSTRAP_REPLICATES = 10_000`. Static inspection
 supports this reconstruction schedule:
 
@@ -78,7 +78,7 @@ recovered.
 
 The machine-readable summary records NumPy `2.5.1` and the script SHA-256
 `ecd80e0085ac446568798c756514c3a36ef4ff3f817e96cd7706ce358e958d97`;
-the [output manifest](../../outputs/s08_tree_stratification_audit_v1/output_hashes.json)
+the compact [checksum manifest](../../results/compact/SHA256SUMS)
 records matching output fingerprints. It names the `default_rng` API but does
 not serialize the bit-generator class. Python's exact version, operating
 system, environment lock, parent-shell command, launch time, and original RNG
@@ -99,8 +99,8 @@ matching-aware stopping. The archived interval export records:
 | `n=40` | 2.2125 | [2.0000, 2.4375] |
 
 This compact table cross-checks only the two manuscript-level summaries; the
-cell table and other descriptive results remain canonical in the archived
-[S08 report](../../outputs/s08_tree_stratification_audit_v1/s08_tree_stratification_report.md#budget-by-target-results).
+cell table and other descriptive results are retained in the compact
+[cell summary](../../results/compact/f_stratification/cell_summaries.csv).
 The interval CSV and JSON agree with the values above, and the validation
 record reports 34 passing archived checks, including complete four-instance
 blocks, 10+10 family composition, known aggregate reconciliation, weighted
@@ -126,16 +126,17 @@ clusters.
 From the repository root, use an environment that supplies the project dependencies:
 
 ```console
-python outputs/s08_tree_stratification_audit_v1/run_s08_tree_stratification.py
+python -m scripts.run_s08_tree_stratification \
+  --input-root TREE_BANK_ROOT \
+  --output NEW_OUTPUT
 ```
 
-Historical provenance recorded use of a machine-specific Python interpreter for
-`outputs/s08_tree_stratification_audit_v1/run_s08_tree_stratification.py`.
-Static inspection confirms that the script has no command-line parser or
-options, resolves the repository and output directory from its own path, reads
-the named n=20 and n=40 archives, and overwrites files in the preserved S08
-directory. This is a reconstruction/reproduction instruction, not evidence of
-the exact historical parent-shell launch, and it was not executed for B10.
+The public runner requires explicit input and output roots and refuses a
+non-empty output directory unless `--overwrite` is supplied. Historical
+provenance recorded a machine-specific interpreter and a path-coupled archived
+implementation; that historical command is provenance only, not the supported
+public interface. The command above is a reconstruction/reproduction
+instruction, not evidence of the exact historical parent-shell launch.
 
 All local links and headings were checked. B01--B09 qualifications remain
 controlling, including original-versus-reconstructed evidence, numerical

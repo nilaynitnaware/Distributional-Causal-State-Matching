@@ -6,7 +6,7 @@
   "case_count": 4,
   "focused_regression_command": {
     "argv": [
-      "/home/nlp-lab/miniconda3/envs/shift-scale/bin/python",
+      "python",
       "-m",
       "pytest",
       "-q",

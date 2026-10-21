@@ -14,8 +14,8 @@ settle licensing, a complete archive, or successful execution.
 ### Appendix-D reproducibility audit
 
 The two machine-readable fact manifests,
-[`facts_manifest.json`](../../outputs/appendix_d_reproducibility_audit/facts_manifest.json)
-and [`facts_manifest_v2.json`](../../outputs/appendix_d_reproducibility_audit/facts_manifest_v2.json),
+`outputs/appendix_d_reproducibility_audit/facts_manifest.json` and
+`outputs/appendix_d_reproducibility_audit/facts_manifest_v2.json`,
 are later audit/reconstruction records. `facts_manifest.json` is the original
 audit facts export; `facts_manifest_v2.json` records the corrected audit facts
 and supersedes v1 where its corrections apply. They support numerical-audit

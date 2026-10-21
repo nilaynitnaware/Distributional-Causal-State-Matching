@@ -50,7 +50,7 @@
   "current_frozen_bank_sha256": "326b1896b4fc637774668594b43c892d74458a503a8b1ebd4f5e31722860d806",
   "current_revision": "75d1a34ed0f710c4335c6361a2e295faba076ee3",
   "environment": {
-    "executable": "/home/nlp-lab/miniconda3/envs/shift-scale/bin/python",
+    "executable": "python",
     "networkx": "3.6.1",
     "numpy": "2.5.1",
     "platform": "Linux-7.0.0-30-generic-x86_64-with-glibc2.39",

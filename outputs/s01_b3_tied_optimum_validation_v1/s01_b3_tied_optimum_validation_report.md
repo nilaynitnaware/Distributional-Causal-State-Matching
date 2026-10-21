@@ -25,7 +25,7 @@ All four SCM cases matched the independent optimum values and complete retained 
 The final focused command was:
 
 ```text
-/home/nlp-lab/miniconda3/envs/shift-scale/bin/python -m pytest -q tests/test_s01_tied_optimum_validation.py tests/test_command_space_matching.py tests/test_s01_tree_population.py tests/test_matching_query_complexity_research.py tests/test_small_mec_matching_query.py
+python -m pytest -q tests/test_s01_tied_optimum_validation.py tests/test_command_space_matching.py tests/test_s01_tree_population.py tests/test_matching_query_complexity_research.py tests/test_small_mec_matching_query.py
 ```
 
 It passed: `39 passed in 1.42s` (runner-recorded subprocess time 1.76 s). The complete runner, including case construction, took 2.32 s elapsed with measured peak RSS 684,388 KiB under `/usr/bin/time -v`; numerical thread variables were all fixed to one.
@@ -57,4 +57,3 @@ The original 180-instance bank, corrected recomputation, Table 2, S01-B, and S01
 - The cap's family-product number is a conservative cumulative accounting upper bound, not measured visited search work.
 
 Within those limits, the manuscript may accurately claim separate targeted validation of tied-optimum/root-flat intersections.
-

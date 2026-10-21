@@ -137,17 +137,17 @@ def main():
         "maximum_absolute_true_root_excess_kl": maximum_true_excess,
         "commands": {
             "focused_and_regression_tests": (
-                "/home/nlp-lab/miniconda3/envs/shift-scale/bin/python -m pytest -q "
+                "python -m pytest -q "
                 "tests/test_s01_tree_population.py tests/test_command_space_matching.py "
                 "tests/test_matching_query_complexity_research.py"
             ),
             "frozen_probe_rerun": (
-                "PYTHONPATH=. /home/nlp-lab/miniconda3/envs/shift-scale/bin/python "
+                "PYTHONPATH=. python "
                 "outputs/s01_scalable_matching_feasibility_v1/run_s01_probes.py "
                 "--output outputs/s01_tree_population_pilot_v1/frozen_probe_rerun.json"
             ),
             "artifact_checks": (
-                "/home/nlp-lab/miniconda3/envs/shift-scale/bin/python "
+                "python "
                 "outputs/s01_tree_population_pilot_v1/artifact_checks.py"
             ),
         },

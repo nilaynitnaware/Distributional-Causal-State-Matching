@@ -1,5 +1,5 @@
 {
-  "exact_runner_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /home/nlp-lab/miniconda3/envs/shift-scale/bin/python outputs/s01_b3_tied_optimum_validation_v1/run_s01_b3_tied_optimum_validation.py",
+  "exact_runner_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m reproduce h --mode replay --output NEW_OUTPUT",
   "files": {
     "graphs/support.py": "250e190f36f42eb752d8d1450b6904362fbc3e5f6317b46355c6e93c969ca9bb",
     "oracle/sparse_shift_scale_kl.py": "126f3aa9debffd4f3ad2ea32c4f9deb0ae416d24d174f6e4580a2ae100e8b65d",
@@ -42,7 +42,7 @@
     "tests/test_small_mec_matching_query.py": "03322238e34994c05bde4c3c26a288160d421c9d7e5367ee4d39b306961f516e"
   },
   "preexisting_worktree_note": "Dirty before S01-B3; preserved. See report and preexisting hashes.",
-  "python": "/home/nlp-lab/miniconda3/envs/shift-scale/bin/python",
+  "python": "python",
   "python_version": "3.12.13",
   "schema_version": "s01_b3_implementation_manifest_v1"
 }
