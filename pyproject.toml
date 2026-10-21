@@ -1,0 +1,8 @@
+[project]
+name = "distributional-causal-state-matching"
+version = "1.0.0"
+description = "Public reproducibility package for Distributional Causal State Matching"
+requires-python = ">=3.12,<3.13"
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "research"]

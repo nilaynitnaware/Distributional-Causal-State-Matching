@@ -1,5 +1,9 @@
 # Shift–Scale Causal State Matching
 
+This release is tested with Python 3.12 (historical runs used Python 3.12.13).
+See the [environment record](docs/reproducibility/ENVIRONMENT.md) for the pinned
+installation, platform evidence, thread settings, and provenance limits.
+
 This repository is a new, independent research implementation of
 infrastructure for matching a desired causal state with shift–scale
 interventions. It is inspired by:
