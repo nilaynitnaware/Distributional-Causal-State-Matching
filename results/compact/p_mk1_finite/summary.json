@@ -1,0 +1,59 @@
+{
+  "claim_exclusions": [
+    "exact invariant-noise shift-scale validation",
+    "independent-session validation",
+    "active acquisition",
+    "B>1 composition"
+  ],
+  "common_gain_modes": 23,
+  "experiment_a": {
+    "identity_improved_fraction": 1.0,
+    "mean_identity_improvement": 14.052920025059619,
+    "mean_regret": 0.0,
+    "mean_selected_kl": 2.0836192489988554,
+    "median_identity_kl": 13.956943192255132,
+    "median_oracle_kl": 1.4159497962247443,
+    "median_regret": 0.0,
+    "median_selected_kl": 1.4159497962247443,
+    "median_spearman": 0.9999999999999999,
+    "n_targets": 27,
+    "selected_in_physical_top3_fraction": 1.0,
+    "selected_in_physical_top_set_fraction": 1.0,
+    "top1_oracle_agreement_fraction": 1.0
+  },
+  "experiment_b": {
+    "identity_improved_fraction": 1.0,
+    "joint_node_mode_top1_accuracy": 1.0,
+    "mean_identity_improvement": 42.45915099632153,
+    "mean_regret": 0.0,
+    "mean_selected_kl": 0.9564039776880859,
+    "median_identity_kl": 42.589654223028546,
+    "median_oracle_kl": 0.939399814756585,
+    "median_regret": 0.0,
+    "median_selected_kl": 0.939399814756585,
+    "median_spearman": 0.9770114942528736,
+    "mode_accuracy_conditional_on_selected_node": 1.0,
+    "n_targets": 27,
+    "node_selection_accuracy": 1.0,
+    "selected_in_physical_top3_fraction": 1.0,
+    "selected_in_physical_top_set_fraction": 1.0,
+    "top1_oracle_agreement_fraction": 1.0
+  },
+  "experiment_b_leave_out": {
+    "identity_improved_fraction": 1.0,
+    "mean_identity_improvement": 38.75786552010459,
+    "mean_regret": 0.13720172735445743,
+    "mean_selected_kl": 4.657689453905031,
+    "median_identity_kl": 42.589654223028546,
+    "median_oracle_kl": 3.172415069938669,
+    "median_regret": 0.0,
+    "median_selected_kl": 3.172415069938669,
+    "median_spearman": 0.9743589743589743,
+    "n_targets": 27,
+    "selected_in_physical_top3_fraction": 1.0,
+    "selected_in_physical_top_set_fraction": 1.0,
+    "top1_oracle_agreement_fraction": 0.9259259259259259
+  },
+  "failed_or_bordered_gain_modes": 4,
+  "scientific_label": "empirical finite gain-mode / mode-specific-noise real-hardware B=1 target matching"
+}

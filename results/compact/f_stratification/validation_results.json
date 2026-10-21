@@ -1,0 +1,454 @@
+{
+  "bootstrap_reproducibility": {
+    "bit_identical_rerun": true,
+    "replicates": 10000,
+    "seed": 20261004
+  },
+  "check_counts": {
+    "PASS": 34
+  },
+  "checks": [
+    {
+      "details": {
+        "expected": 80,
+        "records": 80,
+        "unique": 80
+      },
+      "id": "n20_unique_instance_ids",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "complete": 80
+      },
+      "id": "n20_no_exclusions",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "expected": 320,
+        "missing": [],
+        "observed": 320,
+        "unexpected": []
+      },
+      "id": "n20_unique_instance_policy_cells",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "expected_roots_per_instance_policy": 20,
+        "failures": []
+      },
+      "id": "n20_complete_root_coverage",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "mismatches": []
+      },
+      "id": "n20_raw_maxima_equal_archived_instance_summaries",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "B1:correlated_noise": {
+          "instances": 20,
+          "sources": 20
+        },
+        "B1:shift_scale_generated": {
+          "instances": 20,
+          "sources": 20
+        },
+        "B2:correlated_noise": {
+          "instances": 20,
+          "sources": 20
+        },
+        "B2:shift_scale_generated": {
+          "instances": 20,
+          "sources": 20
+        }
+      },
+      "id": "n20_four_complete_budget_target_cells",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "block_sizes": {
+          "4": 20
+        },
+        "sources": 20
+      },
+      "id": "n20_twenty_complete_source_blocks",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "path": 10,
+        "uniform_random_labelled_tree": 10
+      },
+      "id": "n20_fixed_10_plus_10_family_design",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "budgets": [
+          1,
+          2
+        ],
+        "policies": [
+          "balance",
+          "first_unresolved",
+          "max_undirected_degree",
+          "one_step_matching_aware"
+        ],
+        "unique_sources": 20,
+        "unique_targets": 40
+      },
+      "id": "n20_source_target_budget_policy_identifiers",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "expected": 80,
+        "records": 80,
+        "unique": 80
+      },
+      "id": "n40_unique_instance_ids",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "complete": 80
+      },
+      "id": "n40_no_exclusions",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "expected": 320,
+        "missing": [],
+        "observed": 320,
+        "unexpected": []
+      },
+      "id": "n40_unique_instance_policy_cells",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "expected_roots_per_instance_policy": 40,
+        "failures": []
+      },
+      "id": "n40_complete_root_coverage",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "mismatches": []
+      },
+      "id": "n40_raw_maxima_equal_archived_instance_summaries",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "B1:correlated_noise": {
+          "instances": 20,
+          "sources": 20
+        },
+        "B1:shift_scale_generated": {
+          "instances": 20,
+          "sources": 20
+        },
+        "B2:correlated_noise": {
+          "instances": 20,
+          "sources": 20
+        },
+        "B2:shift_scale_generated": {
+          "instances": 20,
+          "sources": 20
+        }
+      },
+      "id": "n40_four_complete_budget_target_cells",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "block_sizes": {
+          "4": 20
+        },
+        "sources": 20
+      },
+      "id": "n40_twenty_complete_source_blocks",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "path": 10,
+        "uniform_random_labelled_tree": 10
+      },
+      "id": "n40_fixed_10_plus_10_family_design",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "budgets": [
+          1,
+          2
+        ],
+        "policies": [
+          "balance",
+          "first_unresolved",
+          "max_undirected_degree",
+          "one_step_matching_aware"
+        ],
+        "unique_sources": 20,
+        "unique_targets": 40
+      },
+      "id": "n40_source_target_budget_policy_identifiers",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "criterion": "two independent reruns produced bit-identical estimate arrays",
+        "replicates": 10000,
+        "seed": 20261004
+      },
+      "id": "deterministic_bootstrap_reproducibility",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "known_full": 4.1125,
+        "known_match": 1.2875,
+        "observed_full": 4.1125,
+        "observed_match": 1.2875
+      },
+      "id": "n20_one_step_matching_aware_known_aggregate_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "known_full": 3.75,
+        "known_match": 2.725,
+        "observed_full": 3.75,
+        "observed_match": 2.725
+      },
+      "id": "n20_balance_known_aggregate_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "known_full": 7.7,
+        "known_match": 4.1125,
+        "observed_full": 7.7,
+        "observed_match": 4.1125
+      },
+      "id": "n20_first_unresolved_known_aggregate_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "known_full": 5.1,
+        "known_match": 3.125,
+        "observed_full": 5.1,
+        "observed_match": 3.125
+      },
+      "id": "n20_max_undirected_degree_known_aggregate_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "known_full": 5.225,
+        "known_match": 1.4375,
+        "observed_full": 5.225,
+        "observed_match": 1.4375
+      },
+      "id": "n40_one_step_matching_aware_known_aggregate_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "known_full": 4.75,
+        "known_match": 3.65,
+        "observed_full": 4.75,
+        "observed_match": 3.65
+      },
+      "id": "n40_balance_known_aggregate_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "known_full": 10.1,
+        "known_match": 5.55,
+        "observed_full": 10.1,
+        "observed_match": 5.55
+      },
+      "id": "n40_first_unresolved_known_aggregate_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "known_full": 6.8,
+        "known_match": 4.3125,
+        "observed_full": 6.8,
+        "observed_match": 4.3125
+      },
+      "id": "n40_max_undirected_degree_known_aggregate_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "frequency": {
+          "0": 8,
+          "1": 12,
+          "2": 21,
+          "3": 33,
+          "4": 6
+        },
+        "maximum": 4,
+        "mean": 2.2125,
+        "median": 2.0,
+        "minimum": 0,
+        "n": 80,
+        "negative": 0,
+        "positive": 72,
+        "q1": 1.75,
+        "q3": 3.0,
+        "ties": 8
+      },
+      "id": "n40_known_match_win_tie_loss",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "frequency": {
+          "-1": 36,
+          "-2": 1,
+          "0": 43
+        },
+        "maximum": 0,
+        "mean": -0.475,
+        "median": 0.0,
+        "minimum": -2,
+        "n": 80,
+        "negative": 37,
+        "positive": 0,
+        "q1": -1.0,
+        "q3": 0.0,
+        "ties": 43
+      },
+      "id": "n40_known_full_one_step_loss_tie",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "balance:full_recovery_mean": {
+          "overall": 3.75,
+          "weighted_cells": 3.75
+        },
+        "balance:match_mean": {
+          "overall": 2.725,
+          "weighted_cells": 2.725
+        },
+        "first_unresolved:full_recovery_mean": {
+          "overall": 7.7,
+          "weighted_cells": 7.7
+        },
+        "first_unresolved:match_mean": {
+          "overall": 4.1125,
+          "weighted_cells": 4.1125
+        },
+        "max_undirected_degree:full_recovery_mean": {
+          "overall": 5.1,
+          "weighted_cells": 5.1
+        },
+        "max_undirected_degree:match_mean": {
+          "overall": 3.125,
+          "weighted_cells": 3.125
+        },
+        "one_step_matching_aware:full_recovery_mean": {
+          "overall": 4.1125,
+          "weighted_cells": 4.1125
+        },
+        "one_step_matching_aware:match_mean": {
+          "overall": 1.2875,
+          "weighted_cells": 1.2875
+        },
+        "paired_match_d": {
+          "overall": 1.4375,
+          "weighted_cells": 1.4375
+        }
+      },
+      "id": "n20_weighted_cell_to_overall_identities",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "balance:full_recovery_mean": {
+          "overall": 4.75,
+          "weighted_cells": 4.75
+        },
+        "balance:match_mean": {
+          "overall": 3.65,
+          "weighted_cells": 3.65
+        },
+        "first_unresolved:full_recovery_mean": {
+          "overall": 10.1,
+          "weighted_cells": 10.1
+        },
+        "first_unresolved:match_mean": {
+          "overall": 5.55,
+          "weighted_cells": 5.55
+        },
+        "max_undirected_degree:full_recovery_mean": {
+          "overall": 6.8,
+          "weighted_cells": 6.8
+        },
+        "max_undirected_degree:match_mean": {
+          "overall": 4.3125,
+          "weighted_cells": 4.3125
+        },
+        "one_step_matching_aware:full_recovery_mean": {
+          "overall": 5.225,
+          "weighted_cells": 5.225
+        },
+        "one_step_matching_aware:match_mean": {
+          "overall": 1.4375,
+          "weighted_cells": 1.4375
+        },
+        "paired_match_d": {
+          "overall": 2.2125,
+          "weighted_cells": 2.2125
+        }
+      },
+      "id": "n40_weighted_cell_to_overall_identities",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "joined_instances": 160,
+        "policies": 4
+      },
+      "id": "integer_query_costs_and_savings",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "expected": 160,
+        "joined_instances": 160
+      },
+      "id": "combined_bank_denominators",
+      "status": "PASS"
+    },
+    {
+      "details": {
+        "failures": [],
+        "source_target_groups": 80
+      },
+      "id": "target_identifiers_stable_across_budget",
+      "status": "PASS"
+    }
+  ],
+  "independent_aggregation_route": "per_root_results.jsonl grouped by (instance_id, policy), separately maximizing matching_query_count and dag_query_count; checked against instances.jsonl policy_summary",
+  "schema_version": "s08_validation_v1",
+  "status": "PASS"
+}

@@ -1,0 +1,117 @@
+{
+  "controls": {
+    "fully_directed_adaptive_rows": 900,
+    "graph_free_rows": 450,
+    "known_dag_rows": 450,
+    "termination_reasons": {
+      "all_local_mechanisms_known": 3612
+    }
+  },
+  "counts": {
+    "actual_exactness_panel_rows": 12,
+    "actual_main_rows": 4500,
+    "duplicates": 0,
+    "expected_exactness_panel_rows": 12,
+    "expected_main_rows": 4500,
+    "failed_or_incomplete_rows": 0,
+    "malformed_rows": 0,
+    "missing_task_ids": 0,
+    "rows_per_main_source": 10,
+    "source_problems_actual": 450,
+    "source_problems_expected": 450,
+    "total_rows": 4512
+  },
+  "details": {
+    "duplicate_task_ids": [],
+    "failed_or_incomplete_task_ids": [],
+    "malformed_json": [],
+    "malformed_schema": [],
+    "missing_task_ids": [],
+    "pairing_errors": [],
+    "unexpected_task_ids": [],
+    "unexpected_termination_task_ids": []
+  },
+  "exactness": {
+    "count_abs_gap_gt_1e-11": 0,
+    "count_abs_gap_gt_1e-12": 8,
+    "max_abs_KL_gap": 2.1280754936015e-12,
+    "mean_abs_KL_gap": 7.14696229699744e-15,
+    "median_abs_KL_gap": 8.881784197001252e-16,
+    "method": "all_exact_methods",
+    "p95_abs_KL_gap": 1.0658141036401503e-14,
+    "p99_abs_KL_gap": 6.394884621840902e-14,
+    "panel": "all",
+    "predeclared_gate": 2e-11,
+    "rows": 4512,
+    "rows_exceeding_gate": 0,
+    "worst_task_id": "main:n40:g2:r9:exact_cpdag:first_unresolved"
+  },
+  "integrity_failure_counts": {
+    "config_hash_mismatch": 0,
+    "duplicate_task_ids": 0,
+    "failed_or_incomplete_rows": 0,
+    "fully_directed_control_violations": 0,
+    "graph_free_control_violations": 0,
+    "known_DAG_control_violations": 0,
+    "malformed_json_rows": 0,
+    "malformed_schema_rows": 0,
+    "manifest_not_complete": 0,
+    "missing_expected_task_ids": 0,
+    "pairing_errors": 0,
+    "rows_exceeding_predeclared_gate": 0,
+    "stored_KL_gap_inconsistencies": 0,
+    "unexpected_task_ids": 0,
+    "unexpected_termination_rows": 0
+  },
+  "pairing": {
+    "limitation": "Rows do not serialize a source fingerprint; stable task IDs plus deterministic seed construction and equality of source-level K_B_star provide the available pairing audit.",
+    "source_fingerprint_available": false,
+    "validated_keys": [
+      "n",
+      "graph_family",
+      "replicate",
+      "protocol_version",
+      "K_B_star"
+    ]
+  },
+  "provenance": {
+    "base_seed": 20260811,
+    "branch": "query-complexity-matching",
+    "campaign_id": "kl_query_complexity_v1_local_mechanism_full",
+    "head": "1560c1f1b8014263fffbfdb20acfe850e6c35444",
+    "launch_worktree_cleanliness": "not recorded in manifest; cannot be inferred retrospectively from campaign artifacts",
+    "manifest_config_sha256": "96deed97f634ccfed19a1303a327ac8fcb7c5d511ce02088deddce6233279d8a",
+    "manifest_status": "complete",
+    "protocol_version": "kl_query_complexity_v1",
+    "recomputed_config_sha256": "96deed97f634ccfed19a1303a327ac8fcb7c5d511ce02088deddce6233279d8a",
+    "resume_semantics": "append-only JSONL; skip completed stable task_id",
+    "seed_semantics": "SeedSequence([base_seed, n, replicate, graph_regime_index]), spawned into graph, coefficient, noise, and target RNG streams."
+  },
+  "structural_correlations": [
+    {
+      "n": 2700,
+      "pearson_r": 0.7190144966494068,
+      "x": "initial_undirected_edges",
+      "y": "T_over_n"
+    },
+    {
+      "n": 2700,
+      "pearson_r": -0.6270019867191355,
+      "x": "initial_resolved_nodes",
+      "y": "T_over_n"
+    },
+    {
+      "n": 2700,
+      "pearson_r": 0.6423891977720908,
+      "x": "graph_resolved_without_query_nodes",
+      "y": "T_over_n"
+    },
+    {
+      "n": 2700,
+      "pearson_r": 0.6195859722740227,
+      "x": "meek_orientations",
+      "y": "T_over_n"
+    }
+  ],
+  "verdict": "PASS"
+}

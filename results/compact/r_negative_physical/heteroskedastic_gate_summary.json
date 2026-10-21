@@ -1,0 +1,25 @@
+{
+  "gate_1_causal_closure": {
+    "basis": "six 6-8 node one-response station subsystems include every varying signal parent; paired IR/visible subsystems fail residual-independence",
+    "outcome": "PASS"
+  },
+  "gate_2_heteroskedastic_mode_stability": {
+    "basis": "all six averages are temporally stable, but all six reject constant conditional residual variance and each mode has only one session",
+    "denominator": 6,
+    "modes_without_parent_state_heteroskedasticity_at_p_0_01": 0,
+    "outcome": "FAIL",
+    "within_session_modes_passing_max_min_1_5": 6
+  },
+  "gate_3_acquisition_coverage": {
+    "basis": "the prior preregistered changed-noise gate recovered useful union support on 0/6 targets",
+    "outcome": "FAIL",
+    "prior_gate_result": "FAIL"
+  },
+  "gate_4_valid_B1_physical_matching_task": {
+    "M2_correct_selections": 6,
+    "M2_tasks_improving_over_no_action": 6,
+    "outcome": "PASS",
+    "scope": "Level A restricted-station archive replay only",
+    "tasks": 6
+  }
+}

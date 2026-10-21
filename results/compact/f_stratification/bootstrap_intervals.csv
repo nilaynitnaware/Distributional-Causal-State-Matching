@@ -1,0 +1,11 @@
+size,stratum,budget,regime,estimand,observed_mean,percentile_95_low,percentile_95_high,bootstrap_replicates,seed,resampling_unit,stratification
+20,overall,all,all,"mean d = W_balance,MATCH - W_one-step,MATCH",1.4375,1.225,1.65,10000,20261004,source four-instance block,10 path and 10 random-tree source draws with replacement
+20,B1:shift_scale_generated,1,shift_scale_generated,"mean d = W_balance,MATCH - W_one-step,MATCH",1.55,1.2,1.95,10000,20261004,source four-instance block,10 path and 10 random-tree source draws with replacement
+20,B1:correlated_noise,1,correlated_noise,"mean d = W_balance,MATCH - W_one-step,MATCH",1.4,1.0,1.8,10000,20261004,source four-instance block,10 path and 10 random-tree source draws with replacement
+20,B2:shift_scale_generated,2,shift_scale_generated,"mean d = W_balance,MATCH - W_one-step,MATCH",1.55,1.2,1.9,10000,20261004,source four-instance block,10 path and 10 random-tree source draws with replacement
+20,B2:correlated_noise,2,correlated_noise,"mean d = W_balance,MATCH - W_one-step,MATCH",1.25,0.95,1.55,10000,20261004,source four-instance block,10 path and 10 random-tree source draws with replacement
+40,overall,all,all,"mean d = W_balance,MATCH - W_one-step,MATCH",2.2125,2.0,2.4375,10000,20261004,source four-instance block,10 path and 10 random-tree source draws with replacement
+40,B1:shift_scale_generated,1,shift_scale_generated,"mean d = W_balance,MATCH - W_one-step,MATCH",2.25,1.7,2.75,10000,20261004,source four-instance block,10 path and 10 random-tree source draws with replacement
+40,B1:correlated_noise,1,correlated_noise,"mean d = W_balance,MATCH - W_one-step,MATCH",2.3,1.75,2.8,10000,20261004,source four-instance block,10 path and 10 random-tree source draws with replacement
+40,B2:shift_scale_generated,2,shift_scale_generated,"mean d = W_balance,MATCH - W_one-step,MATCH",2.2,1.85,2.55,10000,20261004,source four-instance block,10 path and 10 random-tree source draws with replacement
+40,B2:correlated_noise,2,correlated_noise,"mean d = W_balance,MATCH - W_one-step,MATCH",2.1,1.8,2.4,10000,20261004,source four-instance block,10 path and 10 random-tree source draws with replacement

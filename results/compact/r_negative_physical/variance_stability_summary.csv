@@ -1,0 +1,7 @@
+environment,outcome,n_segments,segment_rows,variance_mean,variance_cv,variance_max_min_ratio,within_session_stable_threshold_1_5,between_session_reproducibility
+uniform_t_ir_1_weak,ir_1,4,250,363849.6861629679,0.0624388940807078,1.1441535372255154,True,not identifiable: one acquisition session
+uniform_t_ir_2_weak,ir_2,4,250,8627.455658346735,0.08157201202280004,1.213916418792414,True,not identifiable: one acquisition session
+uniform_t_ir_3_weak,ir_3,4,250,1044.702657369659,0.06314107357015733,1.1533144253273007,True,not identifiable: one acquisition session
+uniform_diode_vis_1_mid,vis_1,4,250,23652.441183817555,0.10538783581020714,1.295386609773949,True,not identifiable: one acquisition session
+uniform_t_vis_2_weak,vis_2,4,250,692.1790266803514,0.10229154078969173,1.2787785913683567,True,not identifiable: one acquisition session
+uniform_t_vis_3_weak,vis_3,4,250,98.20470813914405,0.11337008080977272,1.297100441243078,True,not identifiable: one acquisition session

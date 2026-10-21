@@ -1,0 +1,7 @@
+target_family,rows,max_abs_KL_gap,mean_abs_KL_gap,median_abs_KL_gap,p95_abs_KL_gap,p99_abs_KL_gap,worst_task_id,count_abs_gap_gt_1e-12,count_abs_gap_gt_1e-11
+correlated_noise,2,0.0,0.0,0.0,0.0,0.0,target_robustness:correlated_noise:first_unresolved,0,0
+external_spd,2,0.0,0.0,0.0,0.0,0.0,target_robustness:external_spd:first_unresolved,0,0
+graph_perturbed,2,4.440892098500626e-16,4.440892098500626e-16,4.440892098500626e-16,4.440892098500626e-16,4.440892098500626e-16,target_robustness:graph_perturbed:first_unresolved,0,0
+heterogeneous_invariant_noise,2,4.440892098500626e-16,4.440892098500626e-16,4.440892098500626e-16,4.440892098500626e-16,4.440892098500626e-16,target_robustness:heterogeneous_invariant_noise:first_unresolved,0,0
+nonproportional_coefficients,2,8.881784197001252e-16,8.881784197001252e-16,8.881784197001252e-16,8.881784197001252e-16,8.881784197001252e-16,target_robustness:nonproportional_coefficients:first_unresolved,0,0
+realisable,2,4.440892098500626e-16,4.440892098500626e-16,4.440892098500626e-16,4.440892098500626e-16,4.440892098500626e-16,target_robustness:realisable:first_unresolved,0,0

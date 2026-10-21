@@ -1,0 +1,22 @@
+{
+  "acquisition_results": {
+    "path_relative_to_project_root": "shift_scale_causal_matching/outputs/kl_query_complexity_v1_local_mechanism_full/results.csv",
+    "sha256": "7fd051b55f8994532b428dd58397aa84bd2ae15b371329bab48db5da4ec7c8ab"
+  },
+  "finite_sample_results": {
+    "path_relative_to_project_root": "shift_scale_causal_matching/outputs/finite_sample_algorithm1_stage_b_v2/machine_readable/results.csv",
+    "sha256": "9838fba30eebfe67ca06701913399daace72deaf93008045d942ed149bda1561"
+  },
+  "finite_sample_summary": {
+    "path_relative_to_project_root": "shift_scale_causal_matching/outputs/finite_sample_algorithm1_stage_b_v2/tables/stage_b_summary.json",
+    "sha256": "f2e4795a089c6f7c57cdf9c7f11091c8b09da29295db9132f945d5b6db529fde"
+  },
+  "learned_graph_manifest": {
+    "path_relative_to_project_root": "shift_scale_causal_matching/outputs/finite_sample_robustness_v1/full/manifest.json",
+    "sha256": "ad703cdd54730115adbe0fa70ab701988764a5155b98da1e5d7e45b48bcb9639"
+  },
+  "learned_graph_results": {
+    "path_relative_to_project_root": "shift_scale_causal_matching/outputs/finite_sample_robustness_v1/full/analysis/results.csv",
+    "sha256": "a8b1e6c7003e51cc6a90713c8f6e91a58bb4f5d96f035ae73ebadc88c6584a5a"
+  }
+}

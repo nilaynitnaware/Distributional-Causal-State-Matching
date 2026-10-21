@@ -1,0 +1,62 @@
+{
+  "all_returned_commands_certified": true,
+  "cap_hit_count": 0,
+  "failures": [],
+  "fallback_count": 0,
+  "instances_complete": 80,
+  "instances_expected": 80,
+  "instances_failed_or_not_run": 0,
+  "maximum_peak_rss_kib": 95288,
+  "overall_status": "complete",
+  "policy_aggregate": {
+    "balance": {
+      "instances_with_worst_case_savings": 49,
+      "marginal_certificate_seconds": 0.09658571425825357,
+      "marginal_seconds_with_shared_cache": 4.532938200049102,
+      "marginal_tied_family_combinations": 169,
+      "marginal_uncached_certificate_checks": 169,
+      "mean_worst_case_dag": 3.75,
+      "mean_worst_case_matching": 2.725,
+      "mean_worst_case_savings": 1.025,
+      "non_singleton_stop_root_paths": 1222
+    },
+    "first_unresolved": {
+      "instances_with_worst_case_savings": 65,
+      "marginal_certificate_seconds": 0.534360530320555,
+      "marginal_seconds_with_shared_cache": 7.417641815729439,
+      "marginal_tied_family_combinations": 452,
+      "marginal_uncached_certificate_checks": 452,
+      "mean_worst_case_dag": 7.7,
+      "mean_worst_case_matching": 4.1125,
+      "mean_worst_case_savings": 3.5875,
+      "non_singleton_stop_root_paths": 1108
+    },
+    "max_undirected_degree": {
+      "instances_with_worst_case_savings": 57,
+      "marginal_certificate_seconds": 0.06775005161762238,
+      "marginal_seconds_with_shared_cache": 5.4007662972435355,
+      "marginal_tied_family_combinations": 71,
+      "marginal_uncached_certificate_checks": 71,
+      "mean_worst_case_dag": 5.1,
+      "mean_worst_case_matching": 3.125,
+      "mean_worst_case_savings": 1.975,
+      "non_singleton_stop_root_paths": 1117
+    },
+    "one_step_matching_aware": {
+      "instances_with_worst_case_savings": 80,
+      "marginal_certificate_seconds": 6.819960307795554,
+      "marginal_seconds_with_shared_cache": 11.675926687661558,
+      "marginal_tied_family_combinations": 6376,
+      "marginal_uncached_certificate_checks": 6376,
+      "mean_worst_case_dag": 4.1125,
+      "mean_worst_case_matching": 1.2875,
+      "mean_worst_case_savings": 2.825,
+      "non_singleton_stop_root_paths": 1438
+    }
+  },
+  "runtime_seconds": {
+    "maximum": 0.5020174882374704,
+    "mean": 0.40149482917622664,
+    "sum": 32.11958633409813
+  }
+}

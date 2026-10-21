@@ -1,0 +1,619 @@
+{
+  "audited_archived_facts": {
+    "bank_instances": 180,
+    "bank_sources": 90,
+    "eligible_instances": 120,
+    "eligible_sources": 60,
+    "exclusion_reason_frequency": {
+      "candidate_class_not_exactly_all_outward_roots": 60,
+      "candidate_count_not_n:10!=5": 2,
+      "candidate_count_not_n:10!=6": 2,
+      "candidate_count_not_n:12!=6": 2,
+      "candidate_count_not_n:2!=5": 6,
+      "candidate_count_not_n:2!=6": 4,
+      "candidate_count_not_n:2!=7": 6,
+      "candidate_count_not_n:3!=5": 6,
+      "candidate_count_not_n:3!=7": 2,
+      "candidate_count_not_n:4!=5": 4,
+      "candidate_count_not_n:4!=6": 8,
+      "candidate_count_not_n:4!=7": 6,
+      "candidate_count_not_n:5!=6": 2,
+      "candidate_count_not_n:6!=7": 6,
+      "candidate_count_not_n:8!=5": 2,
+      "observational_mec_not_collider_free": 36,
+      "skeleton_not_connected": 36,
+      "skeleton_not_tree": 54
+    },
+    "ineligible_instances": 60
+  },
+  "interpretation_limits": [
+    "Query regret compares worst-case query counts with the exact information policy.",
+    "KL regret is checked separately from query regret; optimal KL may be nonzero for unreachable targets.",
+    "Zero regret on this finite structurally eligible frozen subset is not a general minimax-optimality or significance claim."
+  ],
+  "new_measured_results": {
+    "balance": {
+      "eligible_denominator": 120,
+      "heuristic_exact_ratio_exact_positive": {
+        "count": 120,
+        "maximum": 2.0,
+        "mean": 1.3833333333333333,
+        "median": 1.0
+      },
+      "mean_exact_matching_query_cost": 1.4666666666666666,
+      "mean_worst_case_query_cost": 1.85,
+      "query_regret": {
+        "frequency": {
+          "0": 74,
+          "1": 46
+        },
+        "maximum": 1,
+        "mean": 0.38333333333333336,
+        "median": 0.0,
+        "minimum": 0
+      },
+      "resolved_denominator": 120,
+      "unresolved_count": 0,
+      "zero_exact_cost": {
+        "count": 0,
+        "instance_ids": []
+      },
+      "zero_query_regret": {
+        "count": 74,
+        "fraction_of_resolved": 0.6166666666666667
+      }
+    },
+    "eligible_denominator": 120,
+    "one_step_matching_aware": {
+      "eligible_denominator": 120,
+      "heuristic_exact_ratio_exact_positive": {
+        "count": 120,
+        "maximum": 1.0,
+        "mean": 1.0,
+        "median": 1.0
+      },
+      "mean_exact_matching_query_cost": 1.4666666666666666,
+      "mean_worst_case_query_cost": 1.4666666666666666,
+      "query_regret": {
+        "frequency": {
+          "0": 120
+        },
+        "maximum": 0,
+        "mean": 0,
+        "median": 0.0,
+        "minimum": 0
+      },
+      "resolved_denominator": 120,
+      "unresolved_count": 0,
+      "zero_exact_cost": {
+        "count": 0,
+        "instance_ids": []
+      },
+      "zero_query_regret": {
+        "count": 120,
+        "fraction_of_resolved": 1.0
+      }
+    },
+    "resource_outcomes": {
+      "certificate_cap_hits": 0,
+      "inconclusive_terminal_outcomes": 0,
+      "worker_timeouts_or_failures": 0
+    },
+    "resolved_exact_comparisons": 120,
+    "stratified": {
+      "balance": {
+        "actual_structural_family": {
+          "branching_tree": {
+            "eligible_denominator": 40,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 40,
+              "maximum": 2.0,
+              "mean": 1.375,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.375,
+            "mean_worst_case_query_cost": 1.75,
+            "query_regret": {
+              "frequency": {
+                "0": 25,
+                "1": 15
+              },
+              "maximum": 1,
+              "mean": 0.375,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 40,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 25,
+              "fraction_of_resolved": 0.625
+            }
+          },
+          "path": {
+            "eligible_denominator": 80,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 80,
+              "maximum": 2.0,
+              "mean": 1.3875,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.5125,
+            "mean_worst_case_query_cost": 1.9,
+            "query_regret": {
+              "frequency": {
+                "0": 49,
+                "1": 31
+              },
+              "maximum": 1,
+              "mean": 0.3875,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 80,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 49,
+              "fraction_of_resolved": 0.6125
+            }
+          }
+        },
+        "budget": {
+          "2": {
+            "eligible_denominator": 120,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 120,
+              "maximum": 2.0,
+              "mean": 1.3833333333333333,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.4666666666666666,
+            "mean_worst_case_query_cost": 1.85,
+            "query_regret": {
+              "frequency": {
+                "0": 74,
+                "1": 46
+              },
+              "maximum": 1,
+              "mean": 0.38333333333333336,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 120,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 74,
+              "fraction_of_resolved": 0.6166666666666667
+            }
+          }
+        },
+        "n": {
+          "5": {
+            "eligible_denominator": 40,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 40,
+              "maximum": 2.0,
+              "mean": 1.375,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.425,
+            "mean_worst_case_query_cost": 1.8,
+            "query_regret": {
+              "frequency": {
+                "0": 25,
+                "1": 15
+              },
+              "maximum": 1,
+              "mean": 0.375,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 40,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 25,
+              "fraction_of_resolved": 0.625
+            }
+          },
+          "6": {
+            "eligible_denominator": 40,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 40,
+              "maximum": 2.0,
+              "mean": 1.4,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.5,
+            "mean_worst_case_query_cost": 1.9,
+            "query_regret": {
+              "frequency": {
+                "0": 24,
+                "1": 16
+              },
+              "maximum": 1,
+              "mean": 0.4,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 40,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 24,
+              "fraction_of_resolved": 0.6
+            }
+          },
+          "7": {
+            "eligible_denominator": 40,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 40,
+              "maximum": 2.0,
+              "mean": 1.375,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.475,
+            "mean_worst_case_query_cost": 1.85,
+            "query_regret": {
+              "frequency": {
+                "0": 25,
+                "1": 15
+              },
+              "maximum": 1,
+              "mean": 0.375,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 40,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 25,
+              "fraction_of_resolved": 0.625
+            }
+          }
+        },
+        "target_regime": {
+          "correlated_noise": {
+            "eligible_denominator": 60,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 60,
+              "maximum": 2.0,
+              "mean": 1.3333333333333333,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.4833333333333334,
+            "mean_worst_case_query_cost": 1.8166666666666667,
+            "query_regret": {
+              "frequency": {
+                "0": 40,
+                "1": 20
+              },
+              "maximum": 1,
+              "mean": 0.3333333333333333,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 60,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 40,
+              "fraction_of_resolved": 0.6666666666666666
+            }
+          },
+          "realisable": {
+            "eligible_denominator": 60,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 60,
+              "maximum": 2.0,
+              "mean": 1.4333333333333333,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.45,
+            "mean_worst_case_query_cost": 1.8833333333333333,
+            "query_regret": {
+              "frequency": {
+                "0": 34,
+                "1": 26
+              },
+              "maximum": 1,
+              "mean": 0.43333333333333335,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 60,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 34,
+              "fraction_of_resolved": 0.5666666666666667
+            }
+          }
+        }
+      },
+      "one_step_matching_aware": {
+        "actual_structural_family": {
+          "branching_tree": {
+            "eligible_denominator": 40,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 40,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.375,
+            "mean_worst_case_query_cost": 1.375,
+            "query_regret": {
+              "frequency": {
+                "0": 40
+              },
+              "maximum": 0,
+              "mean": 0,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 40,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 40,
+              "fraction_of_resolved": 1.0
+            }
+          },
+          "path": {
+            "eligible_denominator": 80,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 80,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.5125,
+            "mean_worst_case_query_cost": 1.5125,
+            "query_regret": {
+              "frequency": {
+                "0": 80
+              },
+              "maximum": 0,
+              "mean": 0,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 80,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 80,
+              "fraction_of_resolved": 1.0
+            }
+          }
+        },
+        "budget": {
+          "2": {
+            "eligible_denominator": 120,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 120,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.4666666666666666,
+            "mean_worst_case_query_cost": 1.4666666666666666,
+            "query_regret": {
+              "frequency": {
+                "0": 120
+              },
+              "maximum": 0,
+              "mean": 0,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 120,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 120,
+              "fraction_of_resolved": 1.0
+            }
+          }
+        },
+        "n": {
+          "5": {
+            "eligible_denominator": 40,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 40,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.425,
+            "mean_worst_case_query_cost": 1.425,
+            "query_regret": {
+              "frequency": {
+                "0": 40
+              },
+              "maximum": 0,
+              "mean": 0,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 40,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 40,
+              "fraction_of_resolved": 1.0
+            }
+          },
+          "6": {
+            "eligible_denominator": 40,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 40,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.5,
+            "mean_worst_case_query_cost": 1.5,
+            "query_regret": {
+              "frequency": {
+                "0": 40
+              },
+              "maximum": 0,
+              "mean": 0,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 40,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 40,
+              "fraction_of_resolved": 1.0
+            }
+          },
+          "7": {
+            "eligible_denominator": 40,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 40,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.475,
+            "mean_worst_case_query_cost": 1.475,
+            "query_regret": {
+              "frequency": {
+                "0": 40
+              },
+              "maximum": 0,
+              "mean": 0,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 40,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 40,
+              "fraction_of_resolved": 1.0
+            }
+          }
+        },
+        "target_regime": {
+          "correlated_noise": {
+            "eligible_denominator": 60,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 60,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.4833333333333334,
+            "mean_worst_case_query_cost": 1.4833333333333334,
+            "query_regret": {
+              "frequency": {
+                "0": 60
+              },
+              "maximum": 0,
+              "mean": 0,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 60,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 60,
+              "fraction_of_resolved": 1.0
+            }
+          },
+          "realisable": {
+            "eligible_denominator": 60,
+            "heuristic_exact_ratio_exact_positive": {
+              "count": 60,
+              "maximum": 1.0,
+              "mean": 1.0,
+              "median": 1.0
+            },
+            "mean_exact_matching_query_cost": 1.45,
+            "mean_worst_case_query_cost": 1.45,
+            "query_regret": {
+              "frequency": {
+                "0": 60
+              },
+              "maximum": 0,
+              "mean": 0,
+              "median": 0.0,
+              "minimum": 0
+            },
+            "resolved_denominator": 60,
+            "unresolved_count": 0,
+            "zero_exact_cost": {
+              "count": 0,
+              "instance_ids": []
+            },
+            "zero_query_regret": {
+              "count": 60,
+              "fraction_of_resolved": 1.0
+            }
+          }
+        }
+      }
+    },
+    "unresolved_comparisons": 0
+  },
+  "parent_overall_status": "complete",
+  "schema_version": "s01_b2_exact_oracle_validation_v1",
+  "status": "complete",
+  "unresolved": []
+}

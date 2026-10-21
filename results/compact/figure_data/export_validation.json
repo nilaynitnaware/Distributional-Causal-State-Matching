@@ -1,0 +1,32 @@
+{
+  "finite_sample_main_4panel": {
+    "expected_text_present": true,
+    "pdf_bytes": 35855,
+    "pdf_pages": 1,
+    "png_bytes": 561445,
+    "png_pixels": [
+      2854,
+      2167
+    ]
+  },
+  "learned_graph_retention_failure": {
+    "expected_text_present": true,
+    "pdf_bytes": 46884,
+    "pdf_pages": 1,
+    "png_bytes": 491129,
+    "png_pixels": [
+      2807,
+      1698
+    ]
+  },
+  "query_burden_orientation_ambiguity": {
+    "expected_text_present": true,
+    "pdf_bytes": 80187,
+    "pdf_pages": 1,
+    "png_bytes": 360149,
+    "png_pixels": [
+      2861,
+      1359
+    ]
+  }
+}

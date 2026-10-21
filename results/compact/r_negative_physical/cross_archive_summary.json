@@ -1,0 +1,12 @@
+{
+  "archive_comparability": "FAIL",
+  "cross_archive_rank_correlation": null,
+  "cross_archive_top1": null,
+  "leave_true_mode_out_regret": null,
+  "main_paper_viable": "NO",
+  "mean_regret": null,
+  "recommendation": "reject ranking validation; appendix-only comparability negative result",
+  "same_session_correct": 6,
+  "same_session_tasks": 6,
+  "status": "NOT_RUN_COMPARABILITY_KILL_GATE"
+}

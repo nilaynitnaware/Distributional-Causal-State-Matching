@@ -1,0 +1,14 @@
+{
+  "config_sha256": "cd947ba8b5533b8116e659ce4c883cc9f9a9d8999ccd99f7b768e139fb94937a",
+  "figures": [
+    "figures/coefficient_and_variance_error.png",
+    "figures/excess_kl.png",
+    "figures/failure_rate.png"
+  ],
+  "node_rows": 5400,
+  "schema_version": "calibration_free_singleton_finite_sample_results_v1",
+  "source_condition_rows": 540,
+  "source_files": 15,
+  "status": "COMPLETE",
+  "validation_passed": true
+}
