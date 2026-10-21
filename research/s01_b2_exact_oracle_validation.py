@@ -564,13 +564,13 @@ def implementation_manifest(output: Path, runner_copy: Path) -> dict[str, Any]:
             "tests/test_small_mec_matching_query.py": git_output("diff", "--", "tests/test_small_mec_matching_query.py"),
         },
         "sha256": {str(path.relative_to(ROOT)): sha256(path) for path in dependencies},
-        "runner_copy": str(runner_copy.relative_to(ROOT)),
-        "python": sys.executable,
+        "runner_copy": "<output>/run_s01_b2_exact_oracle_validation.py",
+        "python": "python",
         "python_version": platform.python_version(),
         "platform": platform.platform(),
         "reproduction_command": (
             "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 "
-            f"{sys.executable} {runner_copy.relative_to(ROOT)} --output {output.relative_to(ROOT)}"
+            "python -m research.s01_b2_exact_oracle_validation --output <output>"
         ),
     }
 
@@ -803,7 +803,10 @@ def main() -> int:
                     "failure": {"type": "OverallCpuCap", "message": "frozen aggregate CPU cap reached"},
                 })
             break
-        command = [sys.executable, str(runner_copy), "--output", str(output), "--worker", str(index)]
+        command = [
+            sys.executable, "-m", "research.s01_b2_exact_oracle_validation",
+            "--output", str(output), "--worker", str(index),
+        ]
         environment = dict(os.environ)
         for key in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS"):
             environment[key] = "1"
