@@ -1,5 +1,8 @@
 # Reproducibility documentation
 
+The repository-level [a–r reproduction index](../../REPRODUCIBILITY.md) is the
+single command/status table for the public release.
+
 This directory indexes replication documentation and historical provenance. The
 repository includes code, reviewed configurations, dependency specifications,
 bounded frozen inputs, the B2 diagnostic runner, and retrieval guidance; it
