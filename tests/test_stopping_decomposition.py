@@ -4,6 +4,8 @@ import csv
 import json
 from pathlib import Path
 
+import pytest
+
 from research.small_mec_matching_query.stopping_decomposition import (
     DEFAULT_INPUT,
     POLICIES,
@@ -45,6 +47,8 @@ def test_certificate_validation_checks_all_survivors() -> None:
 
 
 def test_frozen_bank_end_to_end(tmp_path: Path) -> None:
+    if not (DEFAULT_INPUT / "per_instance.csv").is_file():
+        pytest.skip("complete corrected-audit trace bank is intentionally omitted")
     result = run_diagnostic(DEFAULT_INPUT, tmp_path)
     validation = result["validation"]
     assert validation["instance_count"] == 180
