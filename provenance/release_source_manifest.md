@@ -3,7 +3,7 @@
 This index records the actual public repository membership. The TSV contains
 one row for every regular payload file currently present, except the two
 manifest files themselves (whose hashes would be self-referential). At this
-revision it contains 279 payload rows and no nonexistent paths.
+revision it contains 280 payload rows and no nonexistent paths.
 
 `source_git_state_qualification` describes public release membership; detailed
 working-tree source paths, hashes, and release modifications for newly copied

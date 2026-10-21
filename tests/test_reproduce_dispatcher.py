@@ -82,3 +82,23 @@ def test_e_rejects_incomplete_inner_summary(tmp_path, monkeypatch, summary):
     monkeypatch.setattr(dispatcher, "_run", fake_run)
     with pytest.raises(RuntimeError, match="artifact e sub-run n20"):
         dispatcher._execute(arguments)
+
+
+def test_k_runs_campaign_then_analysis(tmp_path, monkeypatch):
+    arguments = _arguments(tmp_path, "k", "regenerate")
+    calls = []
+
+    def fake_run(command):
+        calls.append(command)
+        if any("analyze_finite_sample_robustness_v1" in part for part in command):
+            analysis = Path(command[command.index("--output-dir") + 1])
+            analysis.mkdir(parents=True)
+            (analysis / "summary.json").write_text(json.dumps({
+                "validation": {"complete": True, "status_counts": {"SUCCESS": 1}},
+            }))
+
+    monkeypatch.setattr(dispatcher, "_run", fake_run)
+    dispatcher._execute(arguments)
+    assert len(calls) == 2
+    assert any("run_finite_sample_robustness_v1" in part for part in calls[0])
+    assert any("analyze_finite_sample_robustness_v1" in part for part in calls[1])

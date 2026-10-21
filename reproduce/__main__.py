@@ -156,18 +156,27 @@ def _assert_complete_summary(path: Path, artifact: str, subrun: str) -> None:
 
     for key, item in leaves(value):
         lowered = key.lower()
-        if ("failed_or_not_run" in lowered or "incomplete" in lowered or lowered.endswith("failure_count")) and isinstance(item, (int, float)) and item > 0:
+        if ("failed_or_not_run" in lowered or "incomplete" in lowered) and isinstance(item, (int, float)) and item > 0:
             raise RuntimeError(f"artifact {artifact} sub-run {subrun}: incomplete summary {path} ({key}={item})")
+    validation = value.get("validation")
+    if isinstance(validation, dict) and validation.get("complete") is False:
+        raise RuntimeError(f"artifact {artifact} sub-run {subrun}: validation reports incomplete campaign {path}")
+    status_counts = validation.get("status_counts") if isinstance(validation, dict) else None
+    if isinstance(status_counts, dict):
+        allowed = {"SUCCESS", "NO_VALID_CORRUPTION_AVAILABLE"}
+        unexpected = {str(status): count for status, count in status_counts.items() if status not in allowed and count}
+        if unexpected:
+            raise RuntimeError(f"artifact {artifact} sub-run {subrun}: failed task statuses {unexpected}")
 
 
 def _assert_complete(artifact: str, output: Path) -> None:
     summaries = {
         "e": (("n20", output / "n20" / "pilot_summary.json"), ("n40", output / "n40" / "pilot_summary.json")),
-        "k": (("A--F", output / "summary.json"),),
-        "l": (("A--F", output / "summary.json"),),
-        "m": (("A--F", output / "summary.json"),),
-        "n": (("A--F", output / "summary.json"),),
-        "o": (("A--F", output / "summary.json"),),
+        "k": (("A--F analysis", output / "analysis" / "summary.json"),),
+        "l": (("A--F analysis", output / "analysis" / "summary.json"),),
+        "m": (("A--F analysis", output / "analysis" / "summary.json"),),
+        "n": (("A--F analysis", output / "analysis" / "summary.json"),),
+        "o": (("A--F analysis", output / "analysis" / "summary.json"),),
     }
     for subrun, path in summaries.get(artifact, ()):
         _assert_complete_summary(path, artifact, subrun)
@@ -259,7 +268,10 @@ def _execute(arguments: argparse.Namespace) -> None:
     elif artifact == "j":
         _run([py, "-m", "scripts.run_calibration_free_singleton_diagnostic", "all", "--config", "configs/calibration_free_singleton_finite_sample_v1.json", "--output", str(output), *overwrite])
     elif artifact in {"k", "l", "m", "n", "o"}:
-        _run([py, "-m", "scripts.run_finite_sample_robustness_v1", "--full", "--config", "configs/finite_sample_robustness_v1.json", "--output-dir", str(output), "--workers", str(_workers(arguments)), *overwrite])
+        campaign = output / "campaign"
+        analysis = output / "analysis"
+        _run([py, "-m", "scripts.run_finite_sample_robustness_v1", "--full", "--config", "configs/finite_sample_robustness_v1.json", "--output-dir", str(campaign), "--workers", str(_workers(arguments)), *overwrite])
+        _run([py, "-m", "scripts.analyze_finite_sample_robustness_v1", "--input-dir", str(campaign), "--output-dir", str(analysis)])
         _assert_complete(artifact, output)
     elif artifact == "p":
         data = _require_data(arguments)
