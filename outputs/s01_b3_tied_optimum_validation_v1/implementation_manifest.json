@@ -1,0 +1,48 @@
+{
+  "exact_runner_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /home/nlp-lab/miniconda3/envs/shift-scale/bin/python outputs/s01_b3_tied_optimum_validation_v1/run_s01_b3_tied_optimum_validation.py",
+  "files": {
+    "graphs/support.py": "250e190f36f42eb752d8d1450b6904362fbc3e5f6317b46355c6e93c969ca9bb",
+    "oracle/sparse_shift_scale_kl.py": "126f3aa9debffd4f3ad2ea32c4f9deb0ae416d24d174f6e4580a2ae100e8b65d",
+    "outputs/s01_b3_tied_optimum_validation_v1/case_results.json": "6152a07901f162c8d2334373ff0bb612dedf2ac7b98852062f8ebf552098d32f",
+    "outputs/s01_b3_tied_optimum_validation_v1/coverage_matrix.md": "2239834016204df9bbdd8b6dbfa17f053b572f263c2360db21c165edb3a0538b",
+    "outputs/s01_b3_tied_optimum_validation_v1/exploratory_constructions.md": "717bcc0be0a3949d76804bf568915757cb8c61e2fd7d17987c7a9bb21e598d97",
+    "outputs/s01_b3_tied_optimum_validation_v1/frozen_cases.json": "dd70a0183135cbe84e93916d8d27266be9806338d21a75af50b61e80ab605890",
+    "outputs/s01_b3_tied_optimum_validation_v1/run_s01_b3_tied_optimum_validation.py": "a23d9db3e605b054f105ab59337c839718d723e6153f7c809a29fd1a3780789f",
+    "outputs/s01_b3_tied_optimum_validation_v1/s01_b3_tied_optimum_validation_report.md": "ad9c1d659ddbd7f3d698d35d553e981ce759e218ffdf39ee32c8d720ea2b397c",
+    "outputs/s01_b3_tied_optimum_validation_v1/tied_optimum_reference.py": "49dc74e7e3d242b528db89cbf7b041274b2f6c9a533e8cf7a3e8c17bdd8d8fcb",
+    "outputs/s01_b3_tied_optimum_validation_v1/validation_results.json": "539b19eeaac67705532d667c1d0f8e454aa16ee7e97d4e4e8115fab430c4acbe",
+    "research/matching_query_complexity.py": "341f708520bb27292dd9b6f2ada89d7ac38cf8710add2e17fdd0dafc6edcaa4c",
+    "research/s01_tree_population.py": "020ce63dc036f969b65e7f2927b65768a9edfd87816eb2cdf1a79929733af64a",
+    "tests/test_command_space_matching.py": "f08862792a8dd8e35b0e21c4977888cbfad13e5e6f0faf56d45c37c5140ad7a0",
+    "tests/test_matching_query_complexity_research.py": "b23e68705648ef1826be45fd96b523e24849e5defc99c3836aa85ce4f820a068",
+    "tests/test_s01_tied_optimum_validation.py": "85db122312343db9456fcc3538c2c0eb75bccdee831cba4e6187b88c0ea38f7e",
+    "tests/test_s01_tree_population.py": "f82b74c8ae7162cefe233ac9b3eecd77f895cbd2a401ef45a14bc77172ba8d80",
+    "tests/test_small_mec_matching_query.py": "03322238e34994c05bde4c3c26a288160d421c9d7e5367ee4d39b306961f516e"
+  },
+  "head_before_and_after": "75d1a34ed0f710c4335c6361a2e295faba076ee3",
+  "platform": "Linux-7.0.0-30-generic-x86_64-with-glibc2.39",
+  "preexisting_relevant_diff_stat": {
+    "research/matching_query_complexity.py": {
+      "deletions": 13,
+      "insertions": 564
+    },
+    "tests/test_small_mec_matching_query.py": {
+      "deletions": 10,
+      "insertions": 6
+    }
+  },
+  "preexisting_relevant_hashes": {
+    "graphs/support.py": "250e190f36f42eb752d8d1450b6904362fbc3e5f6317b46355c6e93c969ca9bb",
+    "oracle/sparse_shift_scale_kl.py": "126f3aa9debffd4f3ad2ea32c4f9deb0ae416d24d174f6e4580a2ae100e8b65d",
+    "research/matching_query_complexity.py": "341f708520bb27292dd9b6f2ada89d7ac38cf8710add2e17fdd0dafc6edcaa4c",
+    "research/s01_tree_population.py": "020ce63dc036f969b65e7f2927b65768a9edfd87816eb2cdf1a79929733af64a",
+    "tests/test_command_space_matching.py": "f08862792a8dd8e35b0e21c4977888cbfad13e5e6f0faf56d45c37c5140ad7a0",
+    "tests/test_matching_query_complexity_research.py": "b23e68705648ef1826be45fd96b523e24849e5defc99c3836aa85ce4f820a068",
+    "tests/test_s01_tree_population.py": "f82b74c8ae7162cefe233ac9b3eecd77f895cbd2a401ef45a14bc77172ba8d80",
+    "tests/test_small_mec_matching_query.py": "03322238e34994c05bde4c3c26a288160d421c9d7e5367ee4d39b306961f516e"
+  },
+  "preexisting_worktree_note": "Dirty before S01-B3; preserved. See report and preexisting hashes.",
+  "python": "/home/nlp-lab/miniconda3/envs/shift-scale/bin/python",
+  "python_version": "3.12.13",
+  "schema_version": "s01_b3_implementation_manifest_v1"
+}

@@ -1,0 +1,29 @@
+{
+  "all_independent_references_match_production": true,
+  "all_positive_witnesses_directly_kl_certified": true,
+  "all_positive_witnesses_within_global_support_budget": true,
+  "cap_condition_passed": true,
+  "case_count": 4,
+  "focused_regression_command": {
+    "argv": [
+      "/home/nlp-lab/miniconda3/envs/shift-scale/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_s01_tied_optimum_validation.py",
+      "tests/test_command_space_matching.py",
+      "tests/test_s01_tree_population.py",
+      "tests/test_matching_query_complexity_research.py",
+      "tests/test_small_mec_matching_query.py"
+    ],
+    "exit_code": 0,
+    "seconds": 1.691669728141278,
+    "stderr": "",
+    "stdout": ".......................................                                  [100%]\n39 passed in 1.14s\n"
+  },
+  "new_geometry_only_case_count": 0,
+  "one_numerical_thread": true,
+  "realisable_case_count": 4,
+  "schema_version": "s01_b3_validation_results_v1",
+  "status": "passed"
+}

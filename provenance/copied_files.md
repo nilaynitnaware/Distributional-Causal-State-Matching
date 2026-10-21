@@ -1,0 +1,39 @@
+# Working-tree copy provenance
+
+Paths in the source column are relative to the workspace root used to assemble
+this release. Hashes describe the source working-tree bytes before any allowed
+release modification. “Exact copy” means the public file still has those bytes.
+
+| Source path | Source SHA-256 | Target path | Modified? / reason |
+|---|---|---|---|
+| `shift_scale_causal_matching/docs/examples/known_support_tiny.json` | `0843278c57106aed09120ae2ccc1f3530a064b38317e908bf30cf9073e0444a2` | `docs/examples/known_support_tiny.json` | No — exact copy |
+| `shift_scale_causal_matching/research/small_mec_matching_query/stopping_decomposition.py` | `c40ed14df10e4405f380c7c8eeccdc6731f0a2100f98b97976405d599ffa0aee` | `research/small_mec_matching_query/stopping_decomposition.py` | Yes — added explicit output safety and `--overwrite` plumbing |
+| `shift_scale_causal_matching/tests/test_stopping_decomposition.py` | `edc7d4e0994d60c6481f457414a9e9422cebdb026da8b41a73be0818fb44bbc7` | `tests/test_stopping_decomposition.py` | No — exact copy |
+| `shift_scale_causal_matching/outputs/s08_tree_stratification_audit_v1/run_s08_tree_stratification.py` | `ecd80e0085ac446568798c756514c3a36ef4ff3f817e96cd7706ce358e958d97` | `scripts/run_s08_tree_stratification.py` | Yes — replaced workspace paths with input/output arguments and output guard |
+| `shift_scale_causal_matching/outputs/s01_b3_tied_optimum_validation_v1/run_s01_b3_tied_optimum_validation.py` | `a23d9db3e605b054f105ab59337c839718d723e6153f7c809a29fd1a3780789f` | `outputs/s01_b3_tied_optimum_validation_v1/run_s01_b3_tied_optimum_validation.py` | Yes — routes generated evidence to a user output directory |
+| `shift_scale_causal_matching/outputs/s01_b3_tied_optimum_validation_v1/implementation_manifest.json` | `c3e7512ed10c2de4f4241056b21626d8cb3804445982a97b0d768627a122e225` | `outputs/s01_b3_tied_optimum_validation_v1/implementation_manifest.json` | No — exact copy |
+| `shift_scale_causal_matching/outputs/s01_b3_tied_optimum_validation_v1/case_results.json` | `6152a07901f162c8d2334373ff0bb612dedf2ac7b98852062f8ebf552098d32f` | `outputs/s01_b3_tied_optimum_validation_v1/case_results.json` | No — exact copy |
+| `shift_scale_causal_matching/outputs/s01_b3_tied_optimum_validation_v1/validation_results.json` | `539b19eeaac67705532d667c1d0f8e454aa16ee7e97d4e4e8115fab430c4acbe` | `outputs/s01_b3_tied_optimum_validation_v1/validation_results.json` | No — exact copy |
+| `shift_scale_causal_matching/configs/calibration_free_singleton_finite_sample_v1.json` | `cd947ba8b5533b8116e659ce4c883cc9f9a9d8999ccd99f7b768e139fb94937a` | `configs/calibration_free_singleton_finite_sample_v1.json` | No — exact copy |
+| `shift_scale_causal_matching/scripts/run_calibration_free_singleton_diagnostic.py` | `703ba25dcd21c3bb836d2a306bbe4ec7e68e536bc565e7703f0085672907c0e6` | `scripts/run_calibration_free_singleton_diagnostic.py` | Yes — added output guard and `--overwrite` plumbing |
+| `shift_scale_causal_matching/research/calibration_free_singleton_diagnostic/__init__.py` | `79e788bae2903cb99a4d0a274860814344b3fd51a83418684e8cd48d55cc3f52` | `research/calibration_free_singleton_diagnostic/__init__.py` | No — exact copy |
+| `shift_scale_causal_matching/research/calibration_free_singleton_diagnostic/estimator.py` | `26409feab197350b2ae8aadbebd541529975902a69494526208a5b5a6a969305` | `research/calibration_free_singleton_diagnostic/estimator.py` | No — exact copy |
+| `shift_scale_causal_matching/tests/test_calibration_free_singleton_diagnostic.py` | `ef0a24514c722dc5b3273e443ae2713e4fbfc6b6679556f21b5b0cde4f0aba8f` | `tests/test_calibration_free_singleton_diagnostic.py` | No — exact copy |
+| `shift_scale_causal_matching/configs/finite_sample_robustness_v1.json` | `71447206b293ba894105a6f5739eb6ee1033ba7211656a3f8c2c6157d60c2631` | `configs/finite_sample_robustness_v1.json` | No — exact copy |
+| `shift_scale_causal_matching/scripts/run_finite_sample_robustness_v1.py` | `70a636988478ad71bcf4168e84ba8858fbf4fa1326b26f1f9d3c95e90b7efcac` | `scripts/run_finite_sample_robustness_v1.py` | Yes — added output guard and `--overwrite` plumbing |
+| `shift_scale_causal_matching/scripts/analyze_finite_sample_robustness_v1.py` | `4e12d0a07a7b2f0ae40146b4e86cedca0c041b4f76e4d0c3b1a0f3d6b1cfba47` | `scripts/analyze_finite_sample_robustness_v1.py` | Yes — separated read-only campaign input from user-selected analysis output |
+| `shift_scale_causal_matching/tests/test_finite_sample_robustness.py` | `2be72d9306b7696c1d349f6786c33a5c8d8f2fa7718a9894266894e788f241be` | `tests/test_finite_sample_robustness.py` | No — exact copy |
+| `shift_scale_causal_matching/tests/test_finite_sample_robustness_analysis.py` | `2e87b5e865b05fa057a5110626f508cdafbb052693eff6961fa6c4a3b5144112` | `tests/test_finite_sample_robustness_analysis.py` | No — exact copy |
+| `shift_scale_causal_matching/tests/test_finite_sample_robustness_pairing.py` | `4b69af9ab42d8fc731379f364b22c451048e79a1e154d503bb97d425b8afd4b4` | `tests/test_finite_sample_robustness_pairing.py` | No — exact copy |
+| `experiment_mk1_reduced_matching/research/mk1_reduced_real_matching/README.md` | `9388c83790e6ec8f621b368c17a301781b1c088c9e196a94a8bb7d9e0b73e133` | `research/mk1_reduced_real_matching/README.md` | No — exact copy |
+| `experiment_mk1_reduced_matching/research/mk1_reduced_real_matching/run_experiment.py` | `28438bcffc42bbd48bec83b7b40755a15bd09cf9e47342cdd2b2c2b7a9fa7cc4` | `research/mk1_reduced_real_matching/run_experiment.py` | Yes — parameterized data/support and guarded output roots |
+| `experiment_mk1_reduced_matching/research/mk1_reduced_real_matching/tests/test_experiment.py` | `120504049281786a0b5d38cac374cdcef03bb706d4f749ada97af96bf2946095` | `research/mk1_reduced_real_matching/tests/test_experiment.py` | No — exact copy |
+| `experiment_mk1_shift_matching/research/mk1_shift_matching/run_experiment.py` | `6b35fd8a9e2a07428552fc2d071a5df2e31b19a4068c055169013499b9dbf0e7` | `research/mk1_shift_matching/run_experiment.py` | Yes — parameterized support/output roots and removed hard-coded output path |
+| `shift_scale_causal_matching/research/mk1_heteroskedastic_e2e/README.md` | `9749d94c7148f3de752ea8c7c2fb33c57307a77252dcf44f5833488d0c614787` | `research/mk1_heteroskedastic_e2e/README.md` | No — exact copy |
+| `shift_scale_causal_matching/research/mk1_heteroskedastic_e2e/run_audit.py` | `10c02e68bdfebc0fb918b9f2c3dfa971c7724723026d0b9b43e6471c8fbf7e0b` | `research/mk1_heteroskedastic_e2e/run_audit.py` | Yes — parameterized publisher/support inputs and guarded output root |
+| `shift_scale_causal_matching/research/mk1_heteroskedastic_e2e/tests/test_audit.py` | `6e12ef6e462abf5f718294f88fd6b4acb505573401682fd8e298c4cbcb292dd3` | `research/mk1_heteroskedastic_e2e/tests/test_audit.py` | No — exact copy |
+| `shift_scale_causal_matching/research/lt_mk1_b1_cross_archive/README.md` | `e89c12624ec0a2ae93e82ddbc64c2502e112a6c32b6fff9b17526f32691b32a4` | `research/lt_mk1_b1_cross_archive/README.md` | No — exact copy |
+| `shift_scale_causal_matching/research/lt_mk1_b1_cross_archive/run_audit.py` | `27f456aca65cb3feaef9f5daaf0d39737e1f7d05a3117565912e3fe87222e0de` | `research/lt_mk1_b1_cross_archive/run_audit.py` | Yes — parameterized publisher data and routed report/output safely |
+| `shift_scale_causal_matching/research/lt_mk1_b1_cross_archive/tests/test_audit.py` | `77966f7494c8ade5a9d15a7d5d0d15e8c417cf3803b462672ec3473b4e159319` | `research/lt_mk1_b1_cross_archive/tests/test_audit.py` | No — exact copy |
+| `manuscript_graphs_review_20260927/scripts/build_all.py` | `02ea1adbdcd67045500219701a93e78ba6de3f9147571f331e579921bb51f6c8` | `scripts/build_all_figures.py` | Yes — replaced workspace layout assumptions with explicit input/output roots |
+| `manuscript_graphs_review_20260927/scripts/figure_style.py` | `878456ed7c59899a0307a055667737c0ad629a277a21fbd7b3f689c65f4d4523` | `scripts/figure_style.py` | No — exact copy |

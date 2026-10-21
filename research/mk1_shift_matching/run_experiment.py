@@ -23,6 +23,8 @@ import pandas as pd
 import scipy
 from scipy import linalg, stats
 
+from scripts._output_safety import prepare_output_directory
+
 
 REPO = Path(__file__).resolve().parents[2]
 OUTPUT = REPO / "outputs" / "mk1_shift_matching"
@@ -563,7 +565,7 @@ def invariance_diagnostics(
     source_center: np.ndarray,
     source_scale: np.ndarray,
 ) -> pd.DataFrame:
-    cached_path = REPO / "outputs" / "mk1_heteroskedastic_e2e" / "machine_readable" / "shift_environment_classification.json"
+    cached_path = raw_root / "support" / "shift_environment_classification.json"
     cached = {row["environment"]: row for row in json.loads(cached_path.read_text(encoding="utf-8"))}
     full_reference = standardize(
         frames["A_ID"].iloc[IDENTITY_EVALUATION.start:IDENTITY_EVALUATION.stop].loc[:, COMMON_STATE].to_numpy(float),
@@ -884,7 +886,14 @@ def main(raw_root: Path, n_bootstrap: int = N_BOOTSTRAP) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--raw-root", type=Path, required=True)
+    parser.add_argument("--data-root", type=Path, required=True)
+    parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--bootstrap", type=int, default=N_BOOTSTRAP)
+    parser.add_argument("--overwrite", action="store_true")
     arguments = parser.parse_args()
-    main(arguments.raw_root, arguments.bootstrap)
+    OUTPUT = prepare_output_directory(
+        arguments.output,
+        overwrite=arguments.overwrite,
+        protected=(arguments.data_root,),
+    )
+    main(arguments.data_root.resolve(), arguments.bootstrap)
