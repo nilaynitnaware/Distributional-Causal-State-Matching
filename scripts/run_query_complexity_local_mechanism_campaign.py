@@ -213,6 +213,7 @@ def main() -> None:
         default=Path("outputs/kl_query_complexity_v1_local_mechanism_full"),
     )
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--allow-full-campaign", action="store_true")
     args = parser.parse_args()
     if not args.allow_full_campaign:
@@ -224,8 +225,8 @@ def main() -> None:
     config_hash = hashlib.sha256(config_bytes).hexdigest()
     manifest_path = args.output / "manifest.json"
     rows_path = args.output / "results.jsonl"
-    if args.output.exists() and not args.resume:
-        raise FileExistsError("output exists; use --resume only for the same manifest")
+    if args.output.exists() and any(args.output.iterdir()) and not args.overwrite:
+        raise FileExistsError("output directory is not empty; pass --overwrite")
     args.output.mkdir(parents=True, exist_ok=True)
     if manifest_path.exists():
         manifest = json.loads(manifest_path.read_text())

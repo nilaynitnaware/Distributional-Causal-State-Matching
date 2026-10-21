@@ -834,6 +834,14 @@ def main() -> int:
     parser.add_argument("--legacy-comparison-dir", type=Path)
     parser.add_argument("--overwrite", action="store_true")
     arguments = parser.parse_args()
+    if (
+        arguments.output.exists()
+        and any(arguments.output.iterdir())
+        and not arguments.overwrite
+    ):
+        raise FileExistsError(
+            f"output directory is not empty: {arguments.output}; pass --overwrite"
+        )
     if arguments.command == "preregister": preregister(arguments.config, arguments.output)
     elif arguments.command == "run": run(arguments.config, arguments.output, resume=False)
     elif arguments.command == "resume": run(arguments.config, arguments.output, resume=True)

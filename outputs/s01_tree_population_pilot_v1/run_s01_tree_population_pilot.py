@@ -544,8 +544,11 @@ def main():
     parser.add_argument("--output-dir", type=Path, default=OUTPUT)
     parser.add_argument("--worker", type=int)
     parser.add_argument("--aggregate-only", action="store_true")
+    parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
     output = args.output_dir.resolve()
+    if output.exists() and any(output.iterdir()) and not args.overwrite:
+        raise FileExistsError(f"output directory is not empty: {output}; pass --overwrite")
     if args.worker is not None:
         return worker(args.worker, output)
     if hasattr(resource, "RLIMIT_AS"):

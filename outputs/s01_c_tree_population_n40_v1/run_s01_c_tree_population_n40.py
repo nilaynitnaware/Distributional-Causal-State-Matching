@@ -770,8 +770,11 @@ def main():
     parser.add_argument("--worker", type=int)
     parser.add_argument("--aggregate-only", action="store_true")
     parser.add_argument("--max-workers", type=int, default=MAX_WORKERS)
+    parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
     output = args.output_dir.resolve()
+    if output.exists() and any(output.iterdir()) and not args.overwrite:
+        raise FileExistsError(f"output directory is not empty: {output}; pass --overwrite")
     output.mkdir(parents=True, exist_ok=True)
     if args.worker is not None:
         return worker(args.worker, output)

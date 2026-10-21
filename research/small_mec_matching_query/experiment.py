@@ -931,9 +931,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--allow-existing", action="store_true")
+    parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args(argv)
     config = CampaignConfig.from_json(args.config)
-    summary = run_campaign(config, args.output, allow_existing=args.allow_existing)
+    summary = run_campaign(
+        config, args.output, allow_existing=args.allow_existing or args.overwrite
+    )
     print(json.dumps(summary, indent=2, sort_keys=True))
     return 0
 

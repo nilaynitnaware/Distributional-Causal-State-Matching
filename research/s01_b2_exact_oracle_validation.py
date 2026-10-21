@@ -760,15 +760,16 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--worker", type=int)
+    parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
     output = args.output.resolve()
     if args.worker is not None:
         return run_instance(args.worker, output)
 
-    if output.exists():
-        raise FileExistsError(f"refusing to overwrite existing output directory: {output}")
-    output.mkdir(parents=True)
-    (output / "instance_parts").mkdir()
+    if output.exists() and any(output.iterdir()) and not args.overwrite:
+        raise FileExistsError(f"output directory is not empty: {output}; pass --overwrite")
+    output.mkdir(parents=True, exist_ok=args.overwrite)
+    (output / "instance_parts").mkdir(exist_ok=args.overwrite)
     runner_copy = output / "run_s01_b2_exact_oracle_validation.py"
     shutil.copy2(Path(__file__), runner_copy)
     write_json(output / "frozen_config.json", build_config())
