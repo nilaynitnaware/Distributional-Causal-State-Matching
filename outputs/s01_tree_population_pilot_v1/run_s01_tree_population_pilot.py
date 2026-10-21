@@ -573,7 +573,9 @@ def main():
         if cpu >= PILOT_CPU_SECONDS:
             status = "overall_cpu_cap"
             break
-        command = [sys.executable, str(Path(__file__).resolve()), "--worker", str(index), "--output-dir", str(output)]
+        # The parent already applied the user-facing output safety check before
+        # initializing this directory; worker processes must reuse it.
+        command = [sys.executable, str(Path(__file__).resolve()), "--worker", str(index), "--output-dir", str(output), "--overwrite"]
         try:
             subprocess.run(command, cwd=ROOT, env=os.environ.copy(), timeout=WORKER_SECONDS + 5, check=False)
         except subprocess.TimeoutExpired:

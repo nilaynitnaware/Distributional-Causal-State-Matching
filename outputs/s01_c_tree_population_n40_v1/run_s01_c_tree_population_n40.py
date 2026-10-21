@@ -610,7 +610,9 @@ def worker(task_index, output):
 
 
 def run_subprocess(task_index, output):
-    command = [sys.executable, str(Path(__file__).resolve()), "--worker", str(task_index), "--output-dir", str(output)]
+    # The parent already applied the user-facing output safety check before
+    # initializing this directory; worker processes must reuse it.
+    command = [sys.executable, str(Path(__file__).resolve()), "--worker", str(task_index), "--output-dir", str(output), "--overwrite"]
     try:
         completed = subprocess.run(command, cwd=ROOT, env=os.environ.copy(), timeout=WORKER_SECONDS + 5, capture_output=True, text=True)
         return {"task_index": task_index, "returncode": completed.returncode, "stdout": completed.stdout[-2000:], "stderr": completed.stderr[-2000:]}

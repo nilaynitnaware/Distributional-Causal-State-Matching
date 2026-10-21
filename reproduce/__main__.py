@@ -114,6 +114,65 @@ def _run(command: list[str]) -> None:
     subprocess.run(command, cwd=ROOT, check=True)
 
 
+def _default_workers(artifact: str) -> int | None:
+    """Return the documented historical worker count, or a conservative default."""
+    if artifact == "e":
+        return 4  # n=40 historical run; n=20 runner is serial.
+    if artifact in {"k", "l", "m", "n", "o"}:
+        return 8  # documented full A--F historical run.
+    return None
+
+
+def _workers(arguments: argparse.Namespace) -> int:
+    workers = arguments.workers if arguments.workers is not None else _default_workers(arguments.artifact)
+    if workers is None:
+        raise RuntimeError(f"artifact {arguments.artifact} does not support --workers")
+    if workers < 1:
+        raise SystemExit("--workers must be a positive integer")
+    return workers
+
+
+def _assert_complete_summary(path: Path, artifact: str, subrun: str) -> None:
+    """Reject a runner that wrote an explicit incomplete/failure summary.
+
+    Runners historically aggregate worker failures into JSON and can still exit
+    zero.  The dispatcher is the user-facing boundary, so it turns those
+    explicit reports into a non-zero command result.
+    """
+    if not path.exists():
+        raise RuntimeError(f"artifact {artifact} sub-run {subrun}: missing summary {path}")
+    value = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(value, dict):
+        return
+    status = value.get("overall_status", value.get("status"))
+    if isinstance(status, str) and status.lower() not in {"complete", "passed", "success"}:
+        raise RuntimeError(f"artifact {artifact} sub-run {subrun}: incomplete summary {path} (status={status})")
+    def leaves(item: object, prefix: str = ""):
+        if isinstance(item, dict):
+            for key, nested in item.items():
+                yield from leaves(nested, f"{prefix}.{key}" if prefix else key)
+        else:
+            yield prefix, item
+
+    for key, item in leaves(value):
+        lowered = key.lower()
+        if ("failed_or_not_run" in lowered or "incomplete" in lowered or lowered.endswith("failure_count")) and isinstance(item, (int, float)) and item > 0:
+            raise RuntimeError(f"artifact {artifact} sub-run {subrun}: incomplete summary {path} ({key}={item})")
+
+
+def _assert_complete(artifact: str, output: Path) -> None:
+    summaries = {
+        "e": (("n20", output / "n20" / "pilot_summary.json"), ("n40", output / "n40" / "pilot_summary.json")),
+        "k": (("A--F", output / "summary.json"),),
+        "l": (("A--F", output / "summary.json"),),
+        "m": (("A--F", output / "summary.json"),),
+        "n": (("A--F", output / "summary.json"),),
+        "o": (("A--F", output / "summary.json"),),
+    }
+    for subrun, path in summaries.get(artifact, ()):
+        _assert_complete_summary(path, artifact, subrun)
+
+
 def _require_output(arguments: argparse.Namespace) -> Path:
     if arguments.output is None:
         raise SystemExit("--output is required for replay and regenerate modes")
@@ -186,7 +245,8 @@ def _execute(arguments: argparse.Namespace) -> None:
         _run([py, "-m", "research.small_mec_matching_query.stopping_decomposition", "--input", str(data / "corrected_audit"), "--output", str(output), *overwrite])
     elif artifact == "e":
         _run([py, "outputs/s01_tree_population_pilot_v1/run_s01_tree_population_pilot.py", "--output-dir", str(output / "n20"), *overwrite])
-        _run([py, "outputs/s01_c_tree_population_n40_v1/run_s01_c_tree_population_n40.py", "--output-dir", str(output / "n40"), "--max-workers", "4", *overwrite])
+        _run([py, "outputs/s01_c_tree_population_n40_v1/run_s01_c_tree_population_n40.py", "--output-dir", str(output / "n40"), "--max-workers", str(_workers(arguments)), *overwrite])
+        _assert_complete(artifact, output)
     elif artifact == "f":
         data = _require_data(arguments)
         _run([py, "-m", "scripts.run_s08_tree_stratification", "--input-root", str(data), "--output", str(output), *overwrite])
@@ -199,7 +259,8 @@ def _execute(arguments: argparse.Namespace) -> None:
     elif artifact == "j":
         _run([py, "-m", "scripts.run_calibration_free_singleton_diagnostic", "all", "--config", "configs/calibration_free_singleton_finite_sample_v1.json", "--output", str(output), *overwrite])
     elif artifact in {"k", "l", "m", "n", "o"}:
-        _run([py, "-m", "scripts.run_finite_sample_robustness_v1", "--full", "--config", "configs/finite_sample_robustness_v1.json", "--output-dir", str(output), *overwrite])
+        _run([py, "-m", "scripts.run_finite_sample_robustness_v1", "--full", "--config", "configs/finite_sample_robustness_v1.json", "--output-dir", str(output), "--workers", str(_workers(arguments)), *overwrite])
+        _assert_complete(artifact, output)
     elif artifact == "p":
         data = _require_data(arguments)
         _run([py, "-m", "research.mk1_reduced_real_matching.run_experiment", "--data-root", str(data), "--output", str(output), *overwrite])
@@ -220,6 +281,7 @@ def main() -> int:
     parser.add_argument("--data-root", type=Path)
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--yes", action="store_true", help="confirm long regeneration")
+    parser.add_argument("--workers", type=int, help="worker count for e and k--o (defaults: e=4, k--o=8)")
     arguments = parser.parse_args()
     _execute(arguments)
     return 0
