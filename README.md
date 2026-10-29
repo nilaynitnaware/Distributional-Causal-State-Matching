@@ -313,11 +313,12 @@ output-safety notes, use the [portable setup and reproduction guide](docs/reprod
 
 | Artifact | Regeneration command | Outputs |
 |---|---|---|
-| Deterministic introductory examples | `PYTHONDONTWRITEBYTECODE=1 python scripts/figures/make_paper_figures.py` | `Figures/intro_example.pdf`, `Figures/overview.pdf`, and `results/paper_figures/intro_instances.json` |
+| Deterministic introductory examples | `PYTHONDONTWRITEBYTECODE=1 python scripts/figures/make_paper_figures.py` | `Figures/tikz/intro_example.tex`, `Figures/tikz/overview.tex`, and `results/paper_figures/intro_instances.json` |
 
 The generator reconstructs both small instances from their public moments,
 asserts the reported KL, certificates, Bellman values, and policy trajectories,
-then emits the figures only after those checks pass.
+then emits TikZ sources only after those checks pass. The paper compiles these
+sources with `\input`; no local LaTeX installation is needed to regenerate them.
 
 ## Testing
 
