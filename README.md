@@ -309,6 +309,16 @@ audit-host measurements.
 For setup boundaries, available frozen inputs, entrypoint interfaces, and
 output-safety notes, use the [portable setup and reproduction guide](docs/reproducibility/reproduction-guide.md).
 
+### Introductory paper figures
+
+| Artifact | Regeneration command | Outputs |
+|---|---|---|
+| Deterministic introductory examples | `PYTHONDONTWRITEBYTECODE=1 python scripts/figures/make_paper_figures.py` | `Figures/intro_example.pdf`, `Figures/overview.pdf`, and `results/paper_figures/intro_instances.json` |
+
+The generator reconstructs both small instances from their public moments,
+asserts the reported KL, certificates, Bellman values, and policy trajectories,
+then emits the figures only after those checks pass.
+
 ## Testing
 
 Run the complete suite from the repository root:
