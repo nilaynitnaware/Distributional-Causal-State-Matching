@@ -311,14 +311,7 @@ output-safety notes, use the [portable setup and reproduction guide](docs/reprod
 
 ### Introductory paper figures
 
-| Artifact | Regeneration command | Outputs |
-|---|---|---|
-| Deterministic introductory examples | `PYTHONDONTWRITEBYTECODE=1 python scripts/figures/make_paper_figures.py` | `Figures/tikz/intro_example.tex`, `Figures/tikz/overview.tex`, and `results/paper_figures/intro_instances.json` |
-
-The generator reconstructs both small instances from their public moments,
-asserts the reported KL, certificates, Bellman values, and policy trajectories,
-then emits TikZ sources only after those checks pass. The paper compiles these
-sources with `\input`; no local LaTeX installation is needed to regenerate them.
+The introductory figures are TikZ diagrams in the paper source. `python scripts/figures/make_paper_figures.py` computes and checks every number shown in the two-variable and five-node examples and writes them to results/paper_figures/intro_instances.json; the overview figure contains no data.
 
 ## Testing
 
