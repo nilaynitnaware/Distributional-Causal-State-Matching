@@ -262,7 +262,7 @@ def build_finite_sample(
         for n in N_VALUES
     ]
     legend_handles.append(
-        Line2D([0], [0], color=PALETTE["neutral"], linestyle=":", label="Exact-population mean")
+        Line2D([0], [0], color=PALETTE["neutral"], linestyle=":", label="Population mean")
     )
     fig.legend(handles=legend_handles, loc="upper center", ncol=4, bbox_to_anchor=(0.5, 1.005))
     fig.tight_layout(rect=(0, 0, 1, 0.945), pad=0.55, w_pad=1.05, h_pad=1.0)
