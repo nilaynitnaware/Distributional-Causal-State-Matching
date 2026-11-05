@@ -26,7 +26,7 @@ LABELS = {
     "i": "Table 7 + Fig. 3 + Table 11 (finite-sample acquisition)",
     "j": "Calibration-free all-node diagnostic",
     "k": "Robustness: N_obs and N_target axes",
-    "l": "Fig. 2 (learned graphs)",
+    "l": "Fig. 4 (learned graphs)",
     "m": "Table 8 (controlled graph corruptions)",
     "n": "Non-realizable targets",
     "o": "Higher-dimensional stress test (n=80/100)",

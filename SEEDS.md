@@ -113,7 +113,7 @@ seed is **NOT VERIFIED** and is not needed for replay.
   (`experiments/finite_sample_robustness/design.py:90-100`; 
   `experiments/finite_sample_robustness/execution.py:68-76,98-107,159-170,485-494`).
 
-## l — Fig. 2 (learned graphs)
+## l — Fig. 4 (learned graphs)
 
 Uses the artifact-k master and derivation. The learned-graph stream adds the
 `source_samples` graph-estimation seed recorded in each task
