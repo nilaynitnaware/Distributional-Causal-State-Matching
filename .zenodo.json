@@ -1,0 +1,35 @@
+{
+  "upload_type": "software",
+  "title": "Distributional Causal State Matching under Partial Causal Information: code and results (v1.2)",
+  "version": "1.2",
+  "license": "MIT",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Nitnaware, Nilay",
+      "affiliation": "Indian Statistical Institute, Kolkata",
+      "orcid": "0009-0005-2107-8813"
+    },
+    {
+      "name": "Tamimuddin, A.N.S.M.",
+      "affiliation": "Indian Statistical Institute, Kolkata"
+    },
+    {
+      "name": "Saha, Saptarshi",
+      "affiliation": "Indian Statistical Institute, Kolkata",
+      "orcid": "0000-0002-7178-8646"
+    },
+    {
+      "name": "Garain, Utpal",
+      "affiliation": "Indian Statistical Institute, Kolkata",
+      "orcid": "0000-0001-7207-5018"
+    }
+  ],
+  "description": "This release contains the code, configurations, and summary results for the JAIR submission of Distributional Causal State Matching under Partial Causal Information. The documentation and summary results are licensed under CC BY 4.0, while the code is licensed under MIT.",
+  "keywords": [
+    "causal inference",
+    "intervention design",
+    "structural causal models",
+    "experimental design"
+  ]
+}

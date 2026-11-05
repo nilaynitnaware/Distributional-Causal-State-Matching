@@ -1,12 +1,24 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as described in this metadata file."
 title: "Distributional Causal State Matching under Partial Causal Information"
+type: software
+version: "1.2"
+date-released: 2026-11-05
+license: MIT
+repository-code: "https://github.com/nilaynitnaware/Distributional-Causal-State-Matching"
 authors:
   - family-names: Nitnaware
     given-names: Nilay
+    orcid: "https://orcid.org/0009-0005-2107-8813"
+    affiliation: "Indian Statistical Institute, Kolkata"
   - family-names: Tamimuddin
     given-names: A.N.S.M.
+    affiliation: "Indian Statistical Institute, Kolkata"
   - family-names: Saha
     given-names: Saptarshi
+    orcid: "https://orcid.org/0000-0002-7178-8646"
+    affiliation: "Indian Statistical Institute, Kolkata"
   - family-names: Garain
     given-names: Utpal
+    orcid: "https://orcid.org/0000-0001-7207-5018"
+    affiliation: "Indian Statistical Institute, Kolkata"
