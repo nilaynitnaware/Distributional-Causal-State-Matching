@@ -309,6 +309,10 @@ audit-host measurements.
 For setup boundaries, available frozen inputs, entrypoint interfaces, and
 output-safety notes, use the [portable setup and reproduction guide](docs/reproducibility/reproduction-guide.md).
 
+### Introductory paper figures
+
+The introductory figures are TikZ diagrams in the paper source. `python scripts/figures/make_paper_figures.py` computes and checks every number shown in the two-variable and five-node examples and writes them to results/paper_figures/intro_instances.json; the overview figure contains no data.
+
 ## Testing
 
 Run the complete suite from the repository root:
