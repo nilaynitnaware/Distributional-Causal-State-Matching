@@ -223,6 +223,17 @@ def build_finite_sample(
                     alpha=0.95,
                     zorder=2,
                 )
+                axis.annotate(
+                    f"n = {n}",
+                    xy=(1, references[n]),
+                    xycoords=("axes fraction", "data"),
+                    xytext=(-3, 2 if n == 10 else -2),
+                    textcoords="offset points",
+                    ha="right",
+                    va="bottom" if n == 10 else "top",
+                    fontsize=7,
+                    color=color,
+                )
         axis.set_xscale("log")
         axis.set_xlim(82, 12200)
         axis.set_xticks(N_INT_GRID, N_INT_LABELS)
@@ -251,7 +262,7 @@ def build_finite_sample(
         for n in N_VALUES
     ]
     legend_handles.append(
-        Line2D([0], [0], color=PALETTE["neutral"], linestyle=":", label="Exact-population mean")
+        Line2D([0], [0], color=PALETTE["neutral"], linestyle=":", label="Population mean")
     )
     fig.legend(handles=legend_handles, loc="upper center", ncol=4, bbox_to_anchor=(0.5, 1.005))
     fig.tight_layout(rect=(0, 0, 1, 0.945), pad=0.55, w_pad=1.05, h_pad=1.0)
