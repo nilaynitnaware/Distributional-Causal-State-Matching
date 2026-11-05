@@ -15,23 +15,23 @@ ROOT = Path(__file__).resolve().parents[1]
 COMPACT = ROOT / "results" / "compact"
 
 LABELS = {
-    "a": "Table 2 + Fig. 3 (exact-population acquisition)",
+    "a": "Table 3 + Fig. 5 (exact-population acquisition)",
     "b": "Target-family exactness check",
-    "c": "Table 3 (small-MEC exact comparison)",
-    "d": "Table 4 (stopping–selection decomposition)",
-    "e": "Table 5 (population trees, n=20) and n=40 trees",
-    "f": "Table 9 (budget/target stratification)",
+    "c": "Table 4 (small-MEC exact comparison)",
+    "d": "Table 5 (stopping–selection decomposition)",
+    "e": "Table 6 (population trees, n=20) and n=40 trees",
+    "f": "Table 10 (budget/target stratification)",
     "g": "Small-tree exact-optimum comparison",
     "h": "Tied-optimum diagnostic",
-    "i": "Table 6 + Fig. 1 + Table 10 (finite-sample acquisition)",
+    "i": "Table 7 + Fig. 3 + Table 11 (finite-sample acquisition)",
     "j": "Calibration-free all-node diagnostic",
     "k": "Robustness: N_obs and N_target axes",
     "l": "Fig. 2 (learned graphs)",
-    "m": "Table 7 (controlled graph corruptions)",
+    "m": "Table 8 (controlled graph corruptions)",
     "n": "Non-realizable targets",
     "o": "Higher-dimensional stress test (n=80/100)",
-    "p": "Table 8 (Light Tunnel finite-mode matching)",
-    "q": "Table 11 (Light Tunnel root-shift boundary)",
+    "p": "Table 9 (Light Tunnel finite-mode matching)",
+    "q": "Table 12 (Light Tunnel root-shift boundary)",
     "r": "Negative physical diagnostics",
 }
 
@@ -286,7 +286,14 @@ def _execute(arguments: argparse.Namespace) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
+    artifact_help = "artifacts:\n" + "\n".join(
+        f"  {key}  {label}" for key, label in LABELS.items()
+    )
+    parser = argparse.ArgumentParser(
+        description=__doc__,
+        epilog=artifact_help,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
     parser.add_argument("artifact", choices=tuple(LABELS))
     parser.add_argument("--mode", choices=("inspect", "replay", "regenerate"), default="inspect")
     parser.add_argument("--output", type=Path)

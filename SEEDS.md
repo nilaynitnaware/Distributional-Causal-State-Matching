@@ -5,7 +5,7 @@ listed. A seed marked **NOT VERIFIED** must not be reconstructed from an output
 identifier. SHA-256-derived integer seeds use the first eight digest bytes in
 little-endian order unless stated otherwise.
 
-## a — Table 2 + Fig. 3 (exact-population acquisition)
+## a — Table 3 + Fig. 5 (exact-population acquisition)
 
 - Master seed: `20260811` (`configs/query_complexity_local_mechanism_campaign_v1.json:6`).
 - Per problem: `SeedSequence([base_seed, n, replicate, graph_regime_index])`,
@@ -20,7 +20,7 @@ This is a deterministic summary of artifact a. It uses artifact a's four
 streams and introduces no additional random stream. See
 `scripts/run_query_complexity_local_mechanism_campaign.py:62-71`.
 
-## c — Table 3 (small-MEC exact comparison)
+## c — Table 4 (small-MEC exact comparison)
 
 - Master seed: `20260826` (`research/small_mec_matching_query/experiment.py:67`).
 - Source seed: labeled SHA-256 of
@@ -33,13 +33,13 @@ streams and introduces no additional random stream. See
   unchanged; preserve the released loop order.
 - No separate reporting-bootstrap seed is used by the compact paired table.
 
-## d — Table 4 (stopping–selection decomposition)
+## d — Table 5 (stopping–selection decomposition)
 
 No new seed applies. The runner reanalyzes the frozen 180-instance artifact-c
 records and verifies their stored source/target seeds
 (`research/small_mec_matching_query/stopping_decomposition.py:507-513,720-726`).
 
-## e — Table 5 (population trees, n=20) and n=40 trees
+## e — Table 6 (population trees, n=20) and n=40 trees
 
 - n=20 master seed: `20261011`; sources are
   `stable_seed(20261011,"s01b","source",family,20,replicate)` and targets are
@@ -53,7 +53,7 @@ records and verifies their stored source/target seeds
   Fresh generation uses these schedules; byte-identical historical regeneration
   is **NOT VERIFIED**.
 
-## f — Table 9 (budget/target stratification)
+## f — Table 10 (budget/target stratification)
 
 - The tree source/target seeds are frozen artifact-e inputs.
 - Reporting bootstrap seed: `20261004`, 10,000 source-cluster draws
@@ -74,7 +74,7 @@ No seed applies. All four cases are explicit frozen SCM inputs in
 reference and production checker are deterministic. A historical generation
 seed is **NOT VERIFIED** and is not needed for replay.
 
-## i — Table 6 + Fig. 1 + Table 10 (finite-sample acquisition)
+## i — Table 7 + Fig. 3 + Table 11 (finite-sample acquisition)
 
 - Master seed: `20260811` (`configs/finite_sample_algorithm1_stage_b_v2.json:8`).
 - All labeled streams use SHA-256 of pipe-joined parts, first eight bytes,
@@ -119,7 +119,7 @@ Uses the artifact-k master and derivation. The learned-graph stream adds the
 `source_samples` graph-estimation seed recorded in each task
 (`experiments/finite_sample_robustness/design.py:93-96,135`).
 
-## m — Table 7 (controlled graph corruptions)
+## m — Table 8 (controlled graph corruptions)
 
 Uses the artifact-k master and derivation. The corruption stream is labeled
 `(base_seed,source_id,"corruption",corruption_type)`
@@ -136,7 +136,7 @@ deterministic (`experiments/finite_sample_robustness/execution.py:124-151`).
 Uses the artifact-k master and the same labeled source, target, probe, and
 bootstrap streams. No additional size-specific master seed is defined.
 
-## p — Table 8 (Light Tunnel finite-mode matching)
+## p — Table 9 (Light Tunnel finite-mode matching)
 
 - Master/bootstrap generator seed: `20260831`; default block-bootstrap count:
   500 (`research/mk1_reduced_real_matching/run_experiment.py:29-30,727`).
@@ -145,7 +145,7 @@ bootstrap streams. No additional size-specific master seed is defined.
   preserve the released ordering.
 - Publisher CSVs and deterministic fits have no independent seed.
 
-## q — Table 11 (Light Tunnel root-shift boundary)
+## q — Table 12 (Light Tunnel root-shift boundary)
 
 - Master/bootstrap generator seed: `20260831`; default block-bootstrap count:
   500 (`research/mk1_shift_matching/run_experiment.py:33-34,763`).

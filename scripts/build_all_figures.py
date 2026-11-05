@@ -527,9 +527,9 @@ def build_query_burden(
                 for row in points
                 if row["initial_graph_regime"] == regime and row["policy"] == policy
             ]
-            require(len(values) == 450, f"unexpected Table 1 cell count: {regime}, {policy}")
+            require(len(values) == 450, f"unexpected Table 3 cell count: {regime}, {policy}")
             observed = statistics.fmean(values)
-            require(abs(observed - expected) < 5e-5, f"Table 1 check failed: {regime}, {policy}")
+            require(abs(observed - expected) < 5e-5, f"Table 3 check failed: {regime}, {policy}")
             table_means[regime][policy] = observed
     controls = [
         row

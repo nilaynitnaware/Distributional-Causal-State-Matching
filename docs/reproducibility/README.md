@@ -1,5 +1,23 @@
 # Reproducibility documentation
 
+## Numbering note
+
+The records below retain the manuscript numbering in use when they were
+written. In the published version, the corresponding locations are:
+
+- population trees: Appendix D.3;
+- finite-sample acquisition: Appendix D.4;
+- calibration-free diagnostic: Appendix D.4.1;
+- robustness: Appendix D.5;
+- Light Tunnel: Appendix D.6;
+- small-MEC comparison table: Table 4;
+- finite-sample acquisition-cost table: Table 11;
+- Light Tunnel root-shift table: Table 12; and
+- population information table: Table 3.
+
+Appendix D.1 (population query complexity) and Appendix D.2 (small-MEC) are
+unchanged.
+
 The repository-level [a–r reproduction index](../../REPRODUCIBILITY.md) is the
 single command/status table for the public release.
 
